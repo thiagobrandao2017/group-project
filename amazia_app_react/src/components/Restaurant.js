@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-class Favorite extends Component {
+class Restaurant extends Component {
     constructor(props) {
         super(props);
     }
@@ -17,11 +17,11 @@ class Favorite extends Component {
                 <h5>5 stars</h5>
                 <p>New York outpost of the San Francisco eatery serving fiery, innovative takes on Sichuan cuisine.</p>
                 <p>171 E Broadway, New York, NY 10002</p>
-                <button>Delete</button>
-                <button>Back</button>
+                <button>Like</button>
+                <button>Insert View Here</button>
             </div>
         );
     }
 }
 
-export default Favorite;
+export default Restaurant;
