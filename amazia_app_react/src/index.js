@@ -12,9 +12,9 @@ import Favorite from './components/Favorite';
 ReactDom.render(
     <Router history={browserHistory}>
       <Route path='/' component={Dashboard} />
-      <Route path='/restaurants/1' component={Restaurant} />
+      <Route path='/restaurants/:id' component={Restaurant} />
       <Route path="/restaurants/new" component={NewRestaurant} />
-      <Route path='/restaurants/1/edit' component={EditRestaurant} />
+      <Route path='/restaurants/:id/edit' component={EditRestaurant} />
       <Route path='users/:id/favorites' component={Favorites} />
       <Route path='users/:id/favorites/:favorites_id' component={Favorite} />
     </Router>
