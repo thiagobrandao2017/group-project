@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Restaurants from './Restaurants';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -8,9 +9,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        return (
-
-        );
+        <Restaurants />
       </div>
     );
   }
