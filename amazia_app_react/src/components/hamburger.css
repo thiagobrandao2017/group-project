@@ -1,0 +1,142 @@
+#content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  padding: 2% 2%;
+  background-color: rgba(100,100,100,0);
+  box-shadow: -6px 0px 10px 1px #646464;
+
+  -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+}
+
+#content-wrapper.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: auto;
+  background-color: grey;
+}
+
+#menu-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /*width: 50px;*/
+  display: none;
+  padding: 2% 2%;
+  background-color: #CC5252;
+  box-shadow: -6px 0px 10px 1px #646464;
+
+  -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+        transition: all 3s ease;
+}
+
+#menu-wrapper.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: auto;
+  display: block;
+  background-color: grey;
+}
+
+#hamburger-button {
+  /* give your hamburger button a disply of inline-block, vertical-align property of top set height to 15px and width to 20px */
+  display: inline-block;
+  vertical-align: top;
+  height: 15px;
+  width: 20px;
+}
+
+#hamburger-button:hover {
+  /* change the cursor to pointer */
+  cursor: pointer;
+}
+
+#hamburger-button > span {
+  /* set the spans inside your hamburger button to have a display of block height and margin-bottom of 3, width of 20 */
+  display: block;
+  height: 3px;
+  width: 20px;
+  margin-bottom: 3px;
+  background-color: white;
+
+  -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+}
+
+/*half of our resulting 'X'*/
+#hamburger-button.open span:nth-child(1) {
+  -webkit-transform: translateY(6px) rotate(45deg);
+     -moz-transform: translateY(6px) rotate(45deg);
+      -ms-transform: translateY(6px) rotate(45deg);
+       -o-transform: translateY(6px) rotate(45deg);
+          transform: translateY(6px) rotate(45deg);
+}
+/*rotateY rotates this span 90 degrees away from us effectively making it invisible, much like an ultra thin person turning sideways */
+#hamburger-button.open span:nth-child(2) {
+  -webkit-transform: rotateY(90deg);
+     -moz-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+       -o-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+/*Other half of our resulting 'X'*/
+#hamburger-button.open span:nth-child(3) {
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+     -moz-transform: translateY(-6px) rotate(-45deg);
+      -ms-transform: translateY(-6px) rotate(-45deg);
+       -o-transform: translateY(-6px) rotate(-45deg);
+          transform: translateY(-6px) rotate(-45deg);
+}
+
+ul#menu {
+  /* make the list-style-type none and add padding */
+  list-style-type: none;
+  padding: 0 30px 0 0;
+}
+
+ul#menu li {
+  /* give your li's a bottom border */
+  border-bottom: 1px solid darkgray;
+}
+
+ul#menu li.selected {
+  /* change the color on a selected li */
+  /*background-color: rgb(171, 171, 171);*/
+}
+
+ul#menu > li > a {
+  /* give your links a display of block and set padding */
+  display: block;
+  padding: 10px 60px 10px 10px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+ul#menu > li > a:link, a:visited {
+  /* set link color */
+  color: white;
+}
+
+ul#menu > li > a:hover {
+  /* set link hover color */
+  color: #333;
+}
