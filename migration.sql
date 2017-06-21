@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS favorite_restaurants CASCADE;
 CREATE TABLE favorite_restaurants (
 id SERIAL PRIMARY KEY,
 user_id INTEGER REFERENCES users(id),
-restaurant_id INTEGER REFERENCES restaurant(id)
+restaurant_id INTEGER REFERENCES restaurants(id)
 );
 
 DROP TABLE IF EXISTS comments CASACADE;
