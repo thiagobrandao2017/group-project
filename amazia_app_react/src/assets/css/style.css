@@ -1,0 +1,9 @@
+.btn-default {
+  background: orange;
+  width: auto;
+  padding: 15px;
+}
+
+.searchBtn {
+  text-align: center;
+}
