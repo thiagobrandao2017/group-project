@@ -10,13 +10,13 @@ class Restaurant extends Component {
     render() {
         return(
             <div>
-                <img src='https://media.timeout.com/images/100453571/image.jpg'/>
-                <h1>Mission Chinese</h1>
-                <h3>Chinese Food</h3>
-                <h3>Lower East Side</h3>
+                <img src='https://static01.nyt.com/images/2015/09/16/dining/16REST-CASAMONO-slide-AS0C/16REST-CASAMONO-slide-AS0C-master1050.jpg'/>
+                <h1>Casa Mono</h1>
+                <h3>Spanish Food</h3>
+                <h3>Gramercy Park</h3>
                 <h5>5 stars</h5>
-                <p>New York outpost of the San Francisco eatery serving fiery, innovative takes on Sichuan cuisine.</p>
-                <p>171 E Broadway, New York, NY 10002</p>
+                <p>Small-bite fans gather at this intimate Gramercy nook for upscale Spanish dishes & a deep wine list.</p>
+                <p>52 Irving Pl, New York, NY 10003'</p>
                 <button>Like</button>
                 <button>Insert View Here</button>
             </div>

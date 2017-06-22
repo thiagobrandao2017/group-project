@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const allListItems = document.querySelectorAll('li');
   // const menuWrapper = document.querySelector('#menu-wrapper');
 
-  // Toggle the `open` class on the content wrapper
-  // const slideContent = () => {
-  //     menuWrapper.classList.toggle('open');
-  // }
-
   const slideMenu = () => {
     contentWrapper.classList.toggle('open');
   };
