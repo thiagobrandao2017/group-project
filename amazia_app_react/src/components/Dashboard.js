@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Restaurants from './Restaurants';
+import Nav from './Nav';
+import Header from './Header';
+import Footer from './Footer';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -31,11 +34,15 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        {this.state.restaurants.map((restaurant) => {
-          return (
-            <Restaurants key={restaurant.id} restaurant={restaurant} />
-          );
-        })}
+        <Header />
+        <div>
+          {this.state.restaurants.map((restaurant) => {
+            return (
+              <Restaurants key={restaurant.id} restaurant={restaurant} />
+            );
+          })}
+        </div>
+        <Footer />
       </div>
     );
   }
