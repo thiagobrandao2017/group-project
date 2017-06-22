@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Restaurants from './Restaurants';
+import Nav from './Nav';
 
 class Dashboard extends Component {
   constructor(props) {

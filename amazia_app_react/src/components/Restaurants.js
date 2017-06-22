@@ -10,6 +10,7 @@ class Restaurants extends Component {
 
     render() {
         return(
+
           <section className="container-wrapper">
             <div className="container">
               <div className="row">
@@ -36,7 +37,7 @@ class Restaurants extends Component {
                   </div>
                 </div>
 
-              </div>
+            </div>
             </div>
           </section>
 
