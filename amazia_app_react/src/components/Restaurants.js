@@ -15,7 +15,7 @@ class Restaurants extends Component {
               <div className="row">
 
                 <div className="col-md-6 card-container">
-                  <div className="image-box" background={this.props.restaurant.img_url}>
+                  <div className="image-box" style="background: {this.props.restaurant.img_url}">
                   </div>
                   <div className="text-box">
                     <div className="row">
