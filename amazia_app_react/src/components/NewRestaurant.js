@@ -14,7 +14,7 @@ class NewRestaurant extends Component {
           type: '',
           address: '',
           description: '',
-          rating: '',
+          rating: 0,
           area: '',
         }
     }
@@ -23,7 +23,7 @@ class NewRestaurant extends Component {
       event.preventDefault();
 
       axios
-      .post(`http://amazia-app-api.herokuapp.com/restaurants/`, {
+      .post('http://amazia-app.herokuapp.com/restaurants', {
           restaurant: this.state
       })
       .then(() => {
@@ -36,7 +36,7 @@ class NewRestaurant extends Component {
 
     handleChange(event) {
       this.setState({
-        [event.target.name]: event.target.value
+        [event.target.name]: event.target.value,
       });
     }
 
@@ -82,7 +82,7 @@ class NewRestaurant extends Component {
                   Rating
               </div>
               <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="rating" type="text" className="form-control" />
+                  <input onChange={this.handleChange.bind(this)} name="rating" type="number" className="form-control" />
               </div>
               <div className="bold margin-top-10">
                   NYC Location
@@ -95,6 +95,7 @@ class NewRestaurant extends Component {
               </div>
             </form>
           </div>
+
         </div>
     );
   }

@@ -15,7 +15,9 @@
   margin-top: 80px;
   overflow: hidden;
   .image-box {
-    background-image: url("https://static.attn.com/sites/default/files/chipotle-bowl.jpg");
+    img {
+      width: 300px;
+    }
     background-size: cover;
     width: 100%;
     height: 200px;
@@ -40,17 +42,17 @@
       color: gray;
     }
   }
-  &:hover {
-    .caption-wrapper {
-      top: 0;
-    }
-  }
+  // &:hover {
+  //   .caption-wrapper {
+  //     top: 0;
+  //   }
+  // }
 
 }
 
 .caption-wrapper {
   padding: 20px;
-  position: absolute;
+  // position: absolute;
   // width: 100%;
   height: 100%;
   top: 100%;
