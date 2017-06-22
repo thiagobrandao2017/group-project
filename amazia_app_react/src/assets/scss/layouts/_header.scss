@@ -1,0 +1,22 @@
+.header-section {
+  width: 100%;
+  background: $primary-color;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: $white;
+  font-weight: bold;
+  background: $secondary-color;
+  margin-left: 50px;
+  text-align: center;
+  font-size: 30px;
+}
