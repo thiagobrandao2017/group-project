@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router';
 
 
 
@@ -16,7 +16,8 @@ class Restaurants extends Component {
               <div className="row">
 
                 <div className="col-md-6 card-container">
-                  <div className="image-box" background={this.props.restaurant.img_url}>
+                  <div className="image-box">
+                    <img src={this.props.restaurant.img_url} />
                   </div>
                   <div className="text-box">
                     <div className="row">
@@ -29,12 +30,10 @@ class Restaurants extends Component {
                     </div>
                   </div>
 
-                  <div className="caption-wrapper">
-                    <div className="caption">
+
                       <button className="like-btn">Like</button>
-                      <button className="view-btn">View</button>
-                    </div>
-                  </div>
+                      <Link to={`/restaurants/${this.props.restaurant.id}`} className="view-btn">View</Link>
+
                 </div>
 
             </div>
