@@ -17,7 +17,7 @@ class Restaurant extends Component {
                 <h5>5 stars</h5>
                 <p>Small-bite fans gather at this intimate Gramercy nook for upscale Spanish dishes & a deep wine list.</p>
                 <p>52 Irving Pl, New York, NY 10003'</p>
-                <button>Like</button>
+                <button>Like</button> 
                 <button>Insert View Here</button>
             </div>
         );
