@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import hamburger from './hamburger.css';
-import script from './script.js';
+import hamburger from '../assets/css/hamburger.css';
+import script from '../assets/script/script.js';
 
 class Nav extends Component {
     constructor(props) {
