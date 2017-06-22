@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import { browserHistory } from 'react-router';
+
+
+
 
 class Restaurants extends Component {
     constructor(props) {
@@ -9,15 +10,36 @@ class Restaurants extends Component {
 
     render() {
         return(
-            <div>
-                <img src='https://media.timeout.com/images/100453571/image.jpg'/>
-                <h1>Mission Chinese</h1>
-                <h3>Chinese Food</h3>
-                <h3>Lower East Side</h3>
-                <h5>5 stars</h5>
-                <button>like</button>
-                <button>Insert View Here</button>
+          <section className="container-wrapper">
+            <div className="container">
+              <div className="row">
+
+                <div className="col-md-6 card-container">
+                  <div className="image-box" background={this.props.restaurant.img_url}>
+                  </div>
+                  <div className="text-box">
+                    <div className="row">
+                      <div className="col-sm-4">
+                        <h3>{this.props.restaurant.restaurant_name}</h3>
+                      </div>
+                      <div className="col-sm-8 text-right">
+                        <p className="area-font"><span className="food-type-font">{this.props.restaurant.type}</span> {this.props.restaurant.area}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="caption-wrapper">
+                    <div className="caption">
+                      <button className="like-btn">Like</button>
+                      <button className="view-btn">View</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </section>
+
         );
     }
 }
