@@ -15,7 +15,11 @@ class Favorites extends Component {
 
     componentDidMount() {
         axios
-        .get('https://amazia-app.herokuapp.com/restaurants')
+        .get('https://amazia-app.herokuapp.com/restaurants', {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        })
         .then((response) => {
             const favoritesData = response.data;
 

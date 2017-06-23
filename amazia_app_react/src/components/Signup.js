@@ -18,11 +18,11 @@ class Signup extends Component {
         event.preventDefault();
 
         axios
-        .post('http://amazia-app.herokuapp.com/users/', {
+        .post('http://amazia-app.herokuapp.com/users', {
             user: this.state
         })
         .then(() => {
-            browserHistory.push('/');
+            browserHistory.push('/login');
         })
         .catch((err) => {
             console.log(err);
