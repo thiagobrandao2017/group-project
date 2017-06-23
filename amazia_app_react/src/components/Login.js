@@ -16,7 +16,7 @@ class Login extends Component {
         event.preventDefault();
 
         axios
-        .post('http://amazia-app.herokuapp.com/users', {
+        .post('http://amazia-app.herokuapp.com/users/login', {
             user: this.state
         })
         .then((response) => {
