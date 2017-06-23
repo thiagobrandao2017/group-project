@@ -8,7 +8,7 @@ class Header extends Component {
     render() {
         return(
             <section className="header-section">
-                <nav className="nav-wrapper">
+                <nav className="nav-wr  apper">
                     <div className="logo">
                      A
                     </div>

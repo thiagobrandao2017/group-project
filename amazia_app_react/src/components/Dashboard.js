@@ -4,6 +4,7 @@ import Restaurants from './Restaurants';
 import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
+import SearchBar from './SearchBar';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Dashboard extends Component {
       <div>
         <Nav />
         <Header />
+        <SearchBar />
         <div>
           {this.state.restaurants.map((restaurant) => {
             return (
