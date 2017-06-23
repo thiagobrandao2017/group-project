@@ -35,6 +35,7 @@ class Dashboard extends Component {
     return (
       <div>
         <Header />
+        <Nav />
         <div>
           {this.state.restaurants.map((restaurant) => {
             return (

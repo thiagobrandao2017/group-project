@@ -1,22 +1,46 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { browserHistory } from 'react-router';
+import Nav from './Nav';
+import Favorite from './Favorite';
 
 class Favorites extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            favorites: []
+        }
+    }
+
+    componentDidMount() {
+        axios
+        .get('https://amazia-app.herokuapp.com/restaurants')
+        .then((response) => {
+            const favoritesData = response.data;
+
+            this.setState({
+                favorites: favoritesData
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
     }
 
     render() {
         return(
             <div>
-                <img src='https://media.timeout.com/images/100453571/image.jpg'/>
-                <h1>Mission Chinese</h1>
-                <h3>Chinese Food</h3>
-                <h3>Lower East Side</h3>
-                <h5>5 stars</h5>
-                <button>Delete</button>
-                <button>View</button>
+                <Nav />
+
+                <div>
+                { this.state.favorites.map((favorite) => {
+                    return (
+                        <Favorite key={favorite.id}
+                        favorite={favorite} />
+                    );
+                }) }
+                </div>
             </div>
         );
     }
