@@ -1,13 +1,20 @@
-.btn-default {
+.area-search, .food-search {
   width: 100%;
+  text-align: center; }
+
+.area-search-bar, .food-search-bar {
+  margin: 0 auto; }
+
+.dropBtn-type, .dropBtn-area {
   padding: 15px;
-}
+  font-size: 13px;
+  background: #fc0043;
+  border-radius: 10px; }
 
-.btn-toolbar {
-  width: 100%;
-  margin: 0 auto;
-}
+.area-dropdown {
+  width: 500px; }
 
-.searchBtn {
-  text-align: center;
-}
+.food-dropdown {
+  width: 500px; }
+
+/*# sourceMappingURL=style.css.map */

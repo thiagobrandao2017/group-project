@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from  './SearchBar';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Restaurants />
+        <SearchBar />
       </div>
     );
   }

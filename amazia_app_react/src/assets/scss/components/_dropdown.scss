@@ -1,3 +1,12 @@
+.area-search, .food-search {
+  width: 100%;
+  text-align: center;
+}
+
+.area-search-bar, .food-search-bar {
+  margin: 0 auto;
+}
+
 .dropBtn-type, .dropBtn-area {
   padding: 15px;
   font-size: 13px;
@@ -5,10 +14,10 @@
   border-radius: 10px;
 }
 
-.dropdown-area {
-
+.area-dropdown {
+  width: 500px;
 }
 
-.dropdown-type {
-
+.food-dropdown {
+  width: 500px;
 }
