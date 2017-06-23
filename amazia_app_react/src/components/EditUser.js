@@ -8,6 +8,7 @@ class EditUser extends Component {
   render() {
     return (
       <div>
+        <h1>Edit Thiago's Profile</h1>
         <form>
           <div>
             First Name

@@ -10,7 +10,7 @@ class Header extends Component {
             <section class="header-section">
                 <nav class="nav-wrapper">
                     <div class="logo">
-                        <img src="http://i.imgur.com/VvLQew7.png?2" alt="A Logo Here" width="50" />
+                        A
                     </div>
                 </nav>
             </section>

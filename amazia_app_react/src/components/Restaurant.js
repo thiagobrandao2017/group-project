@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { browserHistory } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 class Restaurant extends Component {
     constructor(props) {
