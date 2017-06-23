@@ -10,7 +10,7 @@ class Header extends Component {
             <section class="header-section">
                 <nav class="nav-wrapper">
                     <div class="logo">
-                        A Logo Here
+                        A 
                     </div>
                 </nav>
             </section>
