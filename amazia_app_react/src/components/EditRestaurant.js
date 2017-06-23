@@ -9,14 +9,14 @@ class EditRestaurant extends Component {
         super(props);
 
         this.state = {
-            restaurant_name: "",
-            img_url: "",
-            description: "",
-            type: "",
-            address: "",
-            rating: "",
-            user_id: "",
-            area: ""
+            restaurant_name: '',
+            img_url: '',
+            description: '',
+            type: '',
+            address: '',
+            rating: '',
+            user_id: '',
+            area: ''
         }
     }
 
@@ -43,7 +43,7 @@ class EditRestaurant extends Component {
             restaurantData: this.state
         })
         .then(() => {
-            browserHistory.push("/");
+            browserHistory.push('/');
         })
         .catch((err) => {
             console.log(err);

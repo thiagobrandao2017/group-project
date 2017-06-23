@@ -7,10 +7,10 @@ class Header extends Component {
 
     render() {
         return(
-            <section class="header-section">
-                <nav class="nav-wrapper">
-                    <div class="logo">
-                        A
+            <section className="header-section">
+                <nav className="nav-wr  apper">
+                    <div className="logo">
+                     A
                     </div>
                 </nav>
             </section>

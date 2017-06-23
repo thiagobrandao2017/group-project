@@ -35,8 +35,8 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Header />
         <Nav />
+        <Header />
         <SearchBar />
         <div>
           {this.state.restaurants.map((restaurant) => {

@@ -13,10 +13,12 @@ import EditUser from './components/EditUser';
 import EditRestaurant from './components/EditRestaurant';
 import Favorites from './components/Favorites';
 import Favorite from './components/Favorite';
+import Signup from './components/Signup';
 
 ReactDom.render(
     <Router history={browserHistory}>
       <Route path='/' component={Dashboard} />
+      <Route path='/signup' component={Signup} />
       <Route path='/users/:id/edit' component={EditUser} />
       <Route path='/restaurants/new' component={NewRestaurant} />
       <Route path='/restaurants/new' component={NewRestaurant} />
