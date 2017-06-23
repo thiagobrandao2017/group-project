@@ -1,11 +1,42 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { ButtonToolbar, MenuItem, Col } from 'react-bootstrap';
 import { Link, browserHistory } from 'react-router';
 
 class Restaurants extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            user_id: 0,
+            restaurant_id: 0
+        }
     }
+
+    handleClick() {
+        axios
+        .post('http://amazia-app.herokuapp.com/favorites/', {
+            favorite: this.state
+        }, {
+            header: {
+                'Authorization':window.localStorage.getItem('token')
+            }
+        })
+        .then(() => {
+            console.log(this.state);
+            browserHistory.push('/');
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }
+
+    handleData(event) {
+        console.log(event.target.dataset.id);
+        console.log(user);
+    }
+
+
 
     render() {
         return(
@@ -26,7 +57,7 @@ class Restaurants extends Component {
 
                   <div className="caption-wrapper">
                     <div className="caption">
-                      <button className="like-btn">Like</button>
+                      <button onClick={this.handleData.bind(this)} data-id={this.props.restaurant.id} className="like-btn">Like</button>
                       <Link to={`/restaurants/${this.props.restaurant.id}`} className="view-btn">View</Link>
                     </div>
                   </div>
