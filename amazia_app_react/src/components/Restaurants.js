@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ButtonToolbar, MenuItem, Col } from 'react-bootstrap';
+import { Link, browserHistory } from 'react-router';
 
 class Restaurants extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class Restaurants extends Component {
               <div className="caption-wrapper">
                 <div className="caption">
                   <button className="like-btn">Like</button>
-                  <button className="view-btn">View</button>
+                  <Link to={`/restaurants/${this.props.restaurant.id}`} className="view-btn">View</Link>
                 </div>
               </div>
             </Col>
