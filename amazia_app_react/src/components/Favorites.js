@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import Nav from './Nav';
-import Favorite from './Favorite';
 
 class Favorites extends Component {
     constructor(props) {
@@ -38,12 +37,7 @@ class Favorites extends Component {
                 <Nav />
 
                 <div>
-                { this.state.favorites.map((favorite) => {
-                    return (
-                        <Favorite key={favorite.id}
-                        favorite={favorite} />
-                    );
-                }) }
+        
                 </div>
             </div>
         );
