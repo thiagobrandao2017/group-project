@@ -18,7 +18,11 @@ class Dashboard extends Component {
   componentDidMount() {
     // Equivalent to $.ajax in jQeury, axios is just a different library
     axios
-    .get('https://amazia-app.herokuapp.com/restaurants')
+    .get('https://amazia-app.herokuapp.com/restaurants', {
+        headers: {
+            'Authorization': window.localStorage.getItem('token')
+        }
+    })
     .then((response) => {
       const restaurantsData = response.data;
 

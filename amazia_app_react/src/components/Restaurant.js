@@ -19,7 +19,11 @@ class Restaurant extends Component {
 
     componentDidMount() {
       axios
-      .get(`http://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`)
+      .get(`http://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
+          headers: {
+              'Authorization': window.localStorage.getItem('token')
+          }
+      })
       .then((response) => {
         console.log(response);
 

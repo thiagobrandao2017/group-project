@@ -25,6 +25,10 @@ class NewRestaurant extends Component {
       axios
       .post('http://amazia-app.herokuapp.com/restaurants', {
           restaurant: this.state
+      }, {
+          headers: {
+              'Authorization': window.localStorage.getItem('token')
+          }
       })
       .then(() => {
           browserHistory.push('/');
