@@ -7,7 +7,7 @@ class Footer extends Component {
 
     render() {
         return(
-            <section class="footer-section">
+            <section className="footer-section">
                 <p>copyright AMAZIA</p>
             </section>
         );
