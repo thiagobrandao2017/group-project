@@ -11,7 +11,7 @@ import Restaurant from './components/Restaurant';
 import NewRestaurant from './components/NewRestaurant';
 import EditRestaurant from './components/EditRestaurant';
 import Favorites from './components/Favorites';
-import Favorite from './components/Favorite';
+// import Favorite from './components/Favorite';
 import Signup from './components/Signup';
 import Login from './components/Login';
 
@@ -26,11 +26,10 @@ ReactDom.render(
       <Route path='/' component={Dashboard} onEnter={restrict} />
       <Route path='/signup' component={Signup} />
       <Route path='/login' component={Login} />
+      <Route path='/favorites' component={Favorites} onEnter={restrict} />
       <Route path='/restaurants/new' component={NewRestaurant} onEnter={restrict} />
       <Route path='/restaurants/new' component={NewRestaurant} onEnter={restrict} />
       <Route path='/restaurants/:id' component={Restaurant} onEnter={restrict} />
       <Route path='/restaurants/:id/edit' component={EditRestaurant} onEnter={restrict} />
-      <Route path='users/:id/favorites' component={Favorites} onEnter={restrict} />
-      <Route path='users/:id/favorites/:favorites_id' component={Favorite} onEnter={restrict} />
     </Router>
 , document.getElementById('app'));
