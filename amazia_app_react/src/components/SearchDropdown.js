@@ -36,17 +36,17 @@ class SearchDropdown extends Component {
               <MenuItem eventKey="3" location="#">Chinese</MenuItem>
               <MenuItem eventKey="4" location="#">Korean</MenuItem>
               <MenuItem eventKey="5" location="#">Japanese</MenuItem>
-              <MenuItem eventKey="4" location="#">Italian</MenuItem>
-              <MenuItem eventKey="6" location="#">French</MenuItem>
-              <MenuItem eventKey="7" location="#">Mexican</MenuItem>
+              <MenuItem eventKey="6" location="#">Italian</MenuItem>
+              <MenuItem eventKey="7" location="#">French</MenuItem>
               <MenuItem eventKey="8" location="#">Mediterranean</MenuItem>
               <MenuItem eventKey="9" location="#">Indian</MenuItem>
               <MenuItem eventKey="10" location="#">Thai</MenuItem>
               <MenuItem eventKey="11" location="#">Vietnamese</MenuItem>
               <MenuItem eventKey="12" location="#">Pizza</MenuItem>
               <MenuItem eventKey="13" location="#">Vegan</MenuItem>
-              <MenuItem eventKey="14" location="#">Dessert</MenuItem>
-              <MenuItem eventKey="15" location="#">Other</MenuItem>
+              <MenuItem eventKey="14" location="#">Mexican</MenuItem>
+              <MenuItem eventKey="15" location="#">Dessert</MenuItem>
+              <MenuItem eventKey="16" location="#">Other</MenuItem>
             </DropdownButton>
           </ButtonToolbar>
         </Col>
