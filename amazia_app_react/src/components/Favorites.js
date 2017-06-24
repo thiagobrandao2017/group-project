@@ -14,7 +14,7 @@ class Favorites extends Component {
 
     componentDidMount() {
         axios
-        .get('https://amazia-app.herokuapp.com/restaurants', {
+        .get('https://amazia-app.herokuapp.com/favorites', {
             headers: {
                 'Authorization': window.localStorage.getItem('token')
             }
@@ -30,15 +30,20 @@ class Favorites extends Component {
             console.log(err);
         });
     }
+    // <Favorite key={favorite.id} favorite={favorite} />
 
     render() {
         return(
             <div>
-                <Nav />
+              <div>
+              Hi
+                {this.state.favorites.map((favorite) => {
+                  return (
+                    <h1>{favorite.restaurant_name}</h1>
+                  );
 
-                <div>
-        
-                </div>
+                })}
+              </div>
             </div>
         );
     }

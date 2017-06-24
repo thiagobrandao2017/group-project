@@ -20,9 +20,11 @@ class Login extends Component {
             user: this.state
         })
         .then((response) => {
-            const token = response.data.token;
+            const data = response.data;
+            console.log(data);
 
-            window.localStorage.setItem('token', token);
+            window.localStorage.setItem('token', data.token);
+
 
             browserHistory.push('/');
         })
