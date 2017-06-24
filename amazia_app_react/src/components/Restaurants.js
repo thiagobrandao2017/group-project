@@ -8,33 +8,34 @@ class Restaurants extends Component {
         super(props);
 
         this.state = {
-            user_id: 0,
             restaurant_id: 0
         }
     }
 
-    handleClick() {
+    handleClick(e) {
+        console.log(e.target.dataset.id);
         axios
-        .post('http://amazia-app.herokuapp.com/favorites/', {
-            favorite: this.state
+        .post('https://amazia-app.herokuapp.com/favorites/', {
+            restaurant_id: e.target.dataset.id
         }, {
-            header: {
-                'Authorization':window.localStorage.getItem('token')
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
             }
         })
         .then(() => {
-            console.log(this.state);
             browserHistory.push('/');
         })
         .catch((err) => {
             console.log(err);
         });
     }
-
-    handleData(event) {
-        console.log(event.target.dataset.id);
-        console.log(user);
-    }
+    //
+    // handleData(event) {
+    //     console.log(event.target.dataset.id);
+    //     this.setState({
+    //       restaurant_id: event.target.dataset.id
+    //     })
+    // }
 
 
 
@@ -57,7 +58,7 @@ class Restaurants extends Component {
 
                   <div className="caption-wrapper">
                     <div className="caption">
-                      <button onClick={this.handleData.bind(this)} data-id={this.props.restaurant.id} className="like-btn">Like</button>
+                      <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="like-btn">Like</button>
                       <Link to={`/restaurants/${this.props.restaurant.id}`} className="view-btn">View</Link>
                     </div>
                   </div>

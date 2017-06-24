@@ -27,7 +27,6 @@ class Restaurant extends Component {
       .then((response) => {
         console.log(response);
 
-        // bc this.state is already an object you don't have to wrap it in curly bracket
         this.setState(response.data);
       })
       .catch((err) => {
