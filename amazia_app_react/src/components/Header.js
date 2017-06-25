@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
+import { browserHistory, Link } from 'react-router';
 
 class Header extends Component {
     constructor(props) {
@@ -24,6 +24,9 @@ class Header extends Component {
                 </nav>
                 <button onClick={this.handleLogout.bind(this)}>
                     Logout
+                </button>
+                <button>
+                    <Link to='/favorites'>My Favs</Link>
                 </button>
             </section>
         );
