@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { browserHistory } from 'react-router';
+import { Link, browserHistory } from 'react-router';
+import { Col } from 'react-bootstrap';
 
 class Signup extends Component {
     constructor(props) {
@@ -37,46 +38,49 @@ class Signup extends Component {
 
     render() {
         return(
-            <div>
-                <h2>Signup</h2>
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                    <div>
-                        First Name
-                    </div>
-                    <div>
-                        <input
-                        onChange={this.handleChange.bind(this)}
-                        name='first_name'
-                        type='text'
-                        value={this.state.first_name} />
-                    </div>
-                    <div>
-                        Last Name
-                    </div>
-                    <input
-                    onChange={this.handleChange.bind(this)}
-                    name='last_name'
-                    type='text'
-                    value={this.state.last_name} />
-                    <div>
-                        Email
-                    </div>
-                    <input
-                    onChange={this.handleChange.bind(this)}
-                    name='email'
-                    type='text'
-                    value={this.state.email} />
-                    <div>
-                        Password
-                    </div>
-                    <input
-                    onChange={this.handleChange.bind(this)}
-                    name='password'
-                    type='text'
-                    value={this.state.password} />
-                    <button type='submit'>Submit</button>
-                </form>
+          <section>
+            <div className="container">
+              <div className="board-container">
+                <Col sm={6} className="signup-section">
+                <h1 className="text-center">SIGN UP</h1>
+                <div className="form-container">
+                  <form className="form-container" onSubmit={this.handleSubmit.bind(this)}>
+                      <div>
+                          <input
+                          onChange={this.handleChange.bind(this)}
+                          name="first_name"
+                          type="text"
+                          value={this.state.first_name} placeholder="First Name"/>
+                      </div>
+                      <input
+                      onChange={this.handleChange.bind(this)}
+                      name="last_name"
+                      type="text"
+                      value={this.state.last_name} placeholder="Last Name"/>
+                      <input
+                      onChange={this.handleChange.bind(this)}
+                      name="email"
+                      type="text"
+                      value={this.state.email} placeholder="Email" />
+                      <input
+                      onChange={this.handleChange.bind(this)}
+                      name="password"
+                      type="text"
+                      value={this.state.password} placeholder="Password" />
+                      <div className="text-center">
+                      <button type="submit">Submit</button>
+                      </div>
+                  </form>
+                </div>
+                </Col>
+                <Link className="link" to={`/login`}>
+                  <Col sm={6} className="login-section">
+                  <h1 className="text-center main-text">LOG IN</h1>
+                  </Col>
+                </Link>
+              </div>
             </div>
+          </section>
         );
     }
 }

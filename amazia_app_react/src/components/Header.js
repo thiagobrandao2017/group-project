@@ -1,9 +1,35 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
+import Nav from './Nav';
+import SearchBar from './SearchBar';
+import greenRedLogo from '../assets/img/greenRedLogo.png';
+import axios from 'axios';
+import { Col } from 'react-bootstrap';
+import { Link, browserHistory } from 'react-router';
 
 class Header extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+          user: [],
+        }
+    }
+
+    componentDidMount() {
+      axios
+      .get('https://amazia-app.herokuapp.com/users', {
+          headers: {
+              'Authorization': window.localStorage.getItem('token')
+          }
+      })
+      .then((response) => {
+        this.setState({
+          user: response.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     }
 
     handleLogout(event) {
@@ -11,21 +37,32 @@ class Header extends Component {
 
         window.localStorage.removeItem('token');
 
-        browserHistory.push('login');
+        browserHistory.push('guest');
     }
 
     render() {
         return(
-            <section className="header-section">
-                <nav className="nav-wrapper">
-                    <div className="logo">
-                     A
-                    </div>
-                </nav>
-                <button onClick={this.handleLogout.bind(this)}>
+            <div>
+              <div className="header-container">
+                <Col sm={3}>
+                  <p className="welcome-text">Hi, {this.state.user.first_name}</p>
+                </Col>
+                <Col sm={6}>
+                  <div className="text-center">
+                    <img className="main-logo" src="greenRedLogo.png"/>
+                  </div>
+                </Col>
+                <Col sm={3} className="text-right">
+
+                </Col>
+                <div className="text-right">
+                  <button className="logout-btn" onClick={this.handleLogout.bind(this)}>
                     Logout
-                </button>
-            </section>
+                  </button>
+                </div>
+              </div>
+              <SearchBar />
+            </div>
         );
     }
 }

@@ -1,22 +1,21 @@
-.header-section {
+.header-container {
+  background: $white;
   width: 100%;
-  background: $primary-color;
-  height: 60px;
+  height: 65px;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
-  padding: 10px;
+  z-index: 200;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 9px $light-gray;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: $white;
+.main-logo {
+  width: 150px;
+}
+
+.welcome-text {
   font-weight: bold;
-  background: $secondary-color;
-  margin-left: 50px;
-  text-align: center;
-  font-size: 30px;
+  font-size: 17px;
+  color: $tertiary-color;
 }
