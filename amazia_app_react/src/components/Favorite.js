@@ -8,27 +8,29 @@ class Favorite extends Component {
 
       this.state = {
         restaurant_name: '',
-        img_url: '',
+        img_ur: '',
+        description: '',
         type: '',
         address: '',
-        description: '',
-        rating: 0,
-        area: '',
+        rating: '',
+        user_id: '',
+        area: ''
       }
     }
 
     componentDidMount() {
-      console.log(this.props.params.id);
       axios
-      .get(`http://amazia-app.herokuapp.com/favorites/${this.props.params.id}`, {
+      .get(`http://amazia-app.herokuapp.com/users/${this.props.user.id}/favorites/${this.props.favorite.id}`, {
           headers: {
               'Authorization': window.localStorage.getItem('token')
           }
       })
       .then((response) => {
-        console.log(response);
-        
-        this.setState(response.data);
+        const favoriteData = response.data;
+
+        this.setState({
+            favorite: favoriteData
+        });
       })
       .catch((err) => {
         console.log(err);

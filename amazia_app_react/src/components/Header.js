@@ -16,16 +16,18 @@ class Header extends Component {
 
     render() {
         return(
-            <section className="header-section">
-                <nav className="nav-wrapper">
-                    <div className="logo">
-                     A
-                    </div>
-                </nav>
-                <button onClick={this.handleLogout.bind(this)}>
-                    Logout
-                </button>
-            </section>
+            <div>
+                <section className="header-section">
+                    <nav className="nav-wrapper">
+                        <div className="logo">
+                         A
+                        </div>
+                    </nav>
+                    <button onClick={this.handleLogout.bind(this)}>
+                        Logout
+                    </button>
+                </section>
+            </div>
         );
     }
 }

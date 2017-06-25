@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Restaurants from './Restaurants';
 import Nav from './Nav';
+import Restaurants from './Restaurants';
 import Header from './Header';
 import Footer from './Footer';
 import SearchBar from './SearchBar';
@@ -40,7 +40,7 @@ class Dashboard extends Component {
     return (
       <div>
         <Nav />
-        <Header />
+        {/* <Header /> */}
         <SearchBar />
         <div>
           {this.state.restaurants.map((restaurant) => {
