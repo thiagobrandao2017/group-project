@@ -9,7 +9,7 @@ class Login extends Component {
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
         }
     }
 
@@ -25,8 +25,7 @@ class Login extends Component {
             console.log(data);
 
             window.localStorage.setItem('token', data.token);
-
-
+  
             browserHistory.push('/');
         })
         .catch((err) => {
