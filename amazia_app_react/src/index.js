@@ -3,8 +3,6 @@ import ReactDom from 'react-dom';
 import { Route, Router, browserHistory } from 'react-router';
 
 import './assets/css/style.css';
-import hamburger from './assets/css/hamburger.css';
-import script from './assets/script/script.js';
 
 import Dashboard from  './components/Dashboard';
 import GuestDashboard from  './components/GuestDashboard';

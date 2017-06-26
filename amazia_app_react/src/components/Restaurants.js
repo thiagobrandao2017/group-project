@@ -31,6 +31,19 @@ class Restaurants extends Component {
         .catch((err) => {
             console.log(err);
         });
+
+        const mainLike = document.querySelector('.main-like-btn');
+
+        const mainSaved = () => {
+            // mainLike.classList.toggle('open');
+            mainLike.prepend("Favorite Saved!");
+
+            mainLike.style.color = "green";
+
+            mainLike.style.backgroundColor = "white";
+        }
+
+        mainSaved();
     }
     //
     // handleData(event) {
