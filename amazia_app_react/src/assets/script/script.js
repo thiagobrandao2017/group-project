@@ -8,18 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const allListItems = document.querySelectorAll('li');
   // const menuWrapper = document.querySelector('#menu-wrapper');
 
-  const slideMenu = () => {
-    contentWrapper.classList.toggle('open');
-  };
+  // const slideMenu = () => {
+  //   contentWrapper.classList.toggle('open');
+  // };
 
-  const slideMenuMenu = () => {
-    menuWrapper.classList.toggle('open');
-  };
+  // const slideMenuMenu = () => {
+  //   menuWrapper.classList.toggle('open');
+  // };
 
   // Toggle the `open` class on the hamburger when clicked
-  const animateHamburger = () => {
-    burgerButton.classList.toggle('open');
-  };
+  // const animateHamburger = () => {
+  //   burgerButton.classList.toggle('open');
+  // };
 
   // Add `selected` class to clicked menu <li> element
   // Remove `selected` class to all other <li> elements

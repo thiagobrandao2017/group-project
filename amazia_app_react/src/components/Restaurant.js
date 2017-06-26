@@ -4,6 +4,8 @@ import Header from './Header';
 import Footer from './Footer';
 import { Col } from 'react-bootstrap';
 import { Link, browserHistory } from 'react-router';
+import hamburger from '../assets/css/hamburger.css';
+import script from '../assets/script/script.js';
 
 class Restaurant extends Component {
     constructor(props) {
