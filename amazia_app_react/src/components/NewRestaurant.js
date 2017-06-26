@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Header from './Header';
+import Footer from './Footer';
+import { Dropdown } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 
 // import Nav from './Nav';
@@ -47,60 +50,63 @@ class NewRestaurant extends Component {
     render() {
       return (
         <div>
+        <Header />
 
-          <h2 className="txt-center">Add New Restaurant</h2>
-
-          <div className="container well small-container margin-top-20">
-            <form onSubmit={this.handleSubmit.bind(this)}>
-              <div className="bold">
-                  Restaurant Name
+        <div className="container">
+          <div className="edit-container text-center">
+            <h2>Add New Restaurant</h2>
+            <form className="form" onSubmit={this.handleSubmit.bind(this)}>
+              <div>
+                  <h4>Restaurant Name</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="restaurant_name" type="text" className="form-control" />
+              <div>
+                  <input onChange={this.handleChange.bind(this)} name="restaurant_name" type="text" placeholder="Restaurant's Name" />
               </div>
-              <div className="bold margin-top-10">
-                  Image
+              <div>
+                  <h4>Image</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="img_url" type="text" className="form-control" />
+              <div>
+                  <input onChange={this.handleChange.bind(this)} name="img_url" type="text" placeholder="Image URL"/>
               </div>
-              <div className="bold margin-top-10">
-                  Type
+              <div>
+                  <h4>Type of Food</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="type" type="text" className="form-control" />
+              <div>
+                  <input onChange={this.handleChange.bind(this)} name="type" type="text" placeholder="Restaurant's Name"  />
               </div>
-              <div className="bold margin-top-10">
-                  Address
+              <div>
+                  <h4>Address</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="address" type="text" className="form-control" />
+              <div>
+                  <input onChange={this.handleChange.bind(this)} name="address" type="text" placeholder="Restaurant's Address" />
               </div>
-              <div className="bold margin-top-10">
-                  Description
+              <div>
+                  <h4>Description</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="description" type="text" className="form-control" />
+              <div>
+                  <textarea onChange={this.handleChange.bind(this)} name="description" type="text" placeholder="Description" />
               </div>
-              <div className="bold margin-top-10">
-                  Rating
+              <div>
+                  <h4>Rating</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="rating" type="number" className="form-control" />
+              <div>
+                  <input onChange={this.handleChange.bind(this)} name="rating" type="number"  />
               </div>
-              <div className="bold margin-top-10">
-                  NYC Location
+              <div>
+                  <h4>NYC Location</h4>
               </div>
-              <div className="margin-top-10">
-                  <input onChange={this.handleChange.bind(this)} name="area" type="text" className="form-control" />
+              <div>
+                  <input onChange={this.handleChange.bind(this)} name="area" type="text"  />
               </div>
-              <div className="margin-top-20 txt-center">
-                  <button type="submit" className="btn btn-primary">Submit Restaurant</button>
+              <div className="text-center">
+                  <button type="submit" className="edit-btn">Submit</button>
               </div>
             </form>
           </div>
-
         </div>
+
+      <Footer />
+      </div>
     );
   }
 }

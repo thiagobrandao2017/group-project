@@ -58,7 +58,7 @@ ul#menu {
 }
 
 ul#menu li {
-  border-bottom: 0.3px solid #89F8EA;
+  border-bottom: 2px solid black;
   width: 100%;
   margin-left:auto;
   margin-right:auto;

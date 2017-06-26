@@ -31,7 +31,6 @@ ReactDom.render(
       <Route path='/favorites' component={Favorites} onEnter={restrict} />
       <Route path='/favorites/:id' component={Favorite} onEnter={restrict} />
       <Route path='/restaurants/new' component={NewRestaurant} onEnter={restrict} />
-      <Route path='/restaurants/new' component={NewRestaurant} onEnter={restrict} />
       <Route path='/restaurants/:id' component={Restaurant} onEnter={restrict} />
       <Route path='/restaurants/:id/edit' component={EditRestaurant} onEnter={restrict} />
     </Router>

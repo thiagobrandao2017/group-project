@@ -39,6 +39,7 @@ class Restaurant extends Component {
     }
 
     handleClick(e) {
+        console.log(this.props.params.id);
         axios
         .post('https://amazia-app.herokuapp.com/favorites/', {
             restaurant_id: this.props.params.id
