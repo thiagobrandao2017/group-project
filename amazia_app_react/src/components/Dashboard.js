@@ -37,7 +37,8 @@ class Dashboard extends Component {
     return (
       <section>
         <Header />
-        <div className="container">
+        <SearchBar />
+        <div className="container dashboard-container">
           {this.state.restaurants.map((restaurant) => {
             return (
               <Restaurants key={restaurant.id} restaurant={restaurant} />

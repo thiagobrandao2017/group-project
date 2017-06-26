@@ -10,33 +10,26 @@
   box-shadow: 1px 1px 9px #eeedf2; }
 
 .main-logo {
-  width: 150px; }
+  width: 130px;
+  margin-top: 10px; }
 
 .welcome-text {
   font-weight: bold;
   font-size: 17px;
   color: #2C2D3D; }
 
-.header-section {
+.footer-section {
+  background: #2C2D3D;
   width: 100%;
-  background: #89F8EA;
-  height: 60px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 10px; }
+  height: 100px;
+  color: #ffffff; }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  font-weight: bold;
-  background: #F92116;
-  margin-left: 50px;
-  text-align: center;
-  font-size: 30px; }
+.footer-logo {
+  margin-left: 15px;
+  width: 70px; }
+
+.copyright {
+  margin-top: 50px; }
 
 .detail-view-container {
   width: 80%;
@@ -88,6 +81,9 @@
   .btn-box .like-btn {
     border: #F92116 solid 4px; }
 
+.searchbar-container {
+  box-shadow: 1px 1px 7px #c4c2c2; }
+
 .search-section {
   position: fixed;
   left: 0;
@@ -105,12 +101,17 @@
   width: 100%;
   padding: 10px; }
 
+.guest-logo {
+  width: 100px;
+  position: relative;
+  top: -15px;
+  left: 70%; }
+
 .board-container {
   margin: 0 auto;
   margin-top: 80px;
   width: 100%;
   max-width: 800px;
-  background: red;
   height: 450px;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #888888; }
@@ -126,6 +127,9 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background: #ffffff; }
+
+.login-text {
+  margin-top: 70px; }
 
 .signup-section, .login-section {
   height: 100%;
@@ -150,8 +154,8 @@
 .main-text {
   margin-top: 45%; }
 
-.login-text {
-  margin-top: 70px; }
+.main-login-text {
+  margin-top: 38%; }
 
 .link h1 {
   color: #2C2D3D; }
@@ -162,7 +166,8 @@
     color: #F92116; }
 
 body {
-  font-family: "Comfortaa", "Avenir", "sans-serif"; }
+  font-family: "Comfortaa", "Avenir", "sans-serif";
+  color: #2C2D3D; }
 
 .view-btn, .edit-btn {
   padding: 7px 10px;
@@ -190,14 +195,24 @@ body {
   height: 40px;
   margin-top: 10px; }
 
+.fork-clicked {
+  display: none; }
+
 .fork:hover {
   opacity: 1; }
+
+.fork-big {
+  height: 60px;
+  margin-top: 20px; }
 
 .logout-btn {
   background: #89F8EA;
   border: none;
   border-radius: 5px;
   padding: 7px 13px; }
+
+.dashboard-container {
+  padding-bottom: 150px; }
 
 .container-wrapper {
   width: 100%;
@@ -216,7 +231,7 @@ body {
   margin-top: 20px;
   box-sizing: border-box;
   border-radius: 5px;
-  box-shadow: 2px 2px 8px #888888;
+  box-shadow: 2px 2px 8px #c4c2c2;
   width: 100%;
   overflow: hidden;
   font-family: "Comfortaa", "Avenir", "sans-serif"; }
@@ -271,6 +286,47 @@ body {
   .caption button {
     margin-top: 70px; }
 
+.single-container {
+  box-shadow: 5px 10px 5px #eeedf2, -5px 10px 5px #eeedf2;
+  padding: 0; }
+
+.single-img-box {
+  width: 100%;
+  overflow: hidden;
+  height: 450px; }
+  .single-img-box img {
+    width: 100%;
+    padding: 0; }
+
+.single-text-box {
+  padding: 20px 40px 150px 40px; }
+  .single-text-box p {
+    font-size: 17px; }
+
+.ratings-box {
+  padding: 15px 0; }
+
+.span-font {
+  font-size: 20px;
+  color: #232323;
+  font-weight: normal; }
+
+.edit-container {
+  margin-top: 130px;
+  background: #eeedf2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 130px; }
+
+.form h4 {
+  margin-left: 50px;
+  text-align: left;
+  font-weight: bold; }
+.form input, .form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px; }
+
 .searchbar-container {
   position: fixed;
   top: 65px;
@@ -314,6 +370,9 @@ body {
 
 .address-font {
   color: #F92116;
+  font-weight: bold; }
+
+.font-bold {
   font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

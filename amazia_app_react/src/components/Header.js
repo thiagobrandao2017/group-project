@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import blackLogo from '../assets/img/blackLogo.png';
 import Nav from './Nav';
-import SearchBar from './SearchBar';
-import greenRedLogo from '../assets/img/greenRedLogo.png';
 import axios from 'axios';
 import { Col } from 'react-bootstrap';
 import { Link, browserHistory } from 'react-router';
@@ -45,11 +44,13 @@ class Header extends Component {
             <div>
               <div className="header-container">
                 <Col sm={3}>
-                  <p className="welcome-text">Hi, {this.state.user.first_name}</p>
+                  <p className="welcome-text">{this.state.user.first_name}</p>
                 </Col>
                 <Col sm={6}>
                   <div className="text-center">
-                    <img className="main-logo" src="greenRedLogo.png"/>
+                    <Link to={`/`}>
+                      <img className="main-logo" src={require('../assets/img/blackLogo.png')}/>
+                    </Link>
                   </div>
                 </Col>
                 <Col sm={3} className="text-right">
@@ -61,7 +62,6 @@ class Header extends Component {
                   </button>
                 </div>
               </div>
-              <SearchBar />
             </div>
         );
     }

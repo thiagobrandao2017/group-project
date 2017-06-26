@@ -52,6 +52,7 @@ class Login extends Component {
                   </Col>
                 </Link>
                 <Col sm={6} className="login-section">
+                  <img className="guest-logo" src={require('../assets/img/blackLogo.png')}/>
                   <h1 className="text-center login-text">LOG IN</h1>
                   <div className="form-container">
                     <form className="form-container" onSubmit={this.handleSubmit.bind(this)}>

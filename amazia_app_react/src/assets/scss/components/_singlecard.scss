@@ -1,0 +1,31 @@
+.single-container {
+  box-shadow: 5px 10px 5px $light-gray, -5px 10px 5px $light-gray;
+  padding: 0;
+}
+
+.single-img-box {
+  width: 100%;
+  overflow: hidden;
+  height: 450px;
+  img {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.single-text-box {
+  padding: 20px 40px 150px 40px;
+  p {
+    font-size: 17px;
+  }
+}
+
+.ratings-box {
+  padding: 15px 0;
+}
+
+.span-font {
+  font-size: 20px;
+  color: $gray;
+  font-weight: normal;
+}

@@ -1,9 +1,15 @@
+.guest-logo {
+  width: 100px;
+  position: relative;
+  top: -15px;
+  left: 70%;
+}
+
 .board-container {
   margin:0 auto;
   margin-top: 80px;
   width: 100%;
   max-width: 800px;
-  background: red;
   height: 450px;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #888888;
@@ -22,6 +28,10 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background: $white;
+}
+
+.login-text {
+  margin-top: 70px;
 }
 
 .signup-section, .login-section {
@@ -52,8 +62,8 @@
   margin-top: 45%;
 }
 
-.login-text {
-  margin-top: 70px;
+.main-login-text {
+  margin-top: 38%;
 }
 
 .link {

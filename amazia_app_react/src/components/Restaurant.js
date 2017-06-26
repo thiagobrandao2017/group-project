@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Header from './Header';
+import Footer from './Footer';
+import { Col } from 'react-bootstrap';
 import { Link, browserHistory } from 'react-router';
 
 class Restaurant extends Component {
@@ -7,6 +10,7 @@ class Restaurant extends Component {
       super(props);
 
       this.state = {
+        id: 0,
         restaurant_name: '',
         img_url: '',
         type: '',
@@ -34,18 +38,52 @@ class Restaurant extends Component {
       });
     }
 
+    handleClick(e) {
+        axios
+        .post('https://amazia-app.herokuapp.com/favorites/', {
+            restaurant_id: this.props.params.id
+        }, {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        })
+        .then(() => {
+            browserHistory.push(`/restaurants/${this.props.params.id}`);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }
+
     render() {
         return(
             <div>
-                <img src={this.state.img_url}/>
-                <h1>{this.state.restaurant_name}</h1>
-                <h3>{this.state.type}</h3>
-                <h3>{this.state.area}</h3>
-                <h5>{this.state.rating}</h5>
-                <p>{this.state.description}</p>
-                <p>{this.state.address}</p>
-                <button>Like</button>
-                <button>Insert View Here</button>
+              <Header />
+              <div className="container single-container">
+                <div className="single-img-box">
+                  <img src={this.state.img_url} />
+                </div>
+                <div className="single-text-box">
+                  <div className="row">
+                    <Col sm={11}>
+                      <h1 className="font-bold">{this.state.restaurant_name} <span className="span-font">{this.state.type}</span></h1>
+                      <h4 className="font-bold">{this.state.area}</h4>
+                    </Col>
+                    <Col sm={1}>
+                      <button onClick={(e) => this.handleClick(e)} className="like-btn"><img className="fork-big" src={require('../assets/img/blackFork.png')}/>
+                      <img className="fork-big fork-clicked" src={require('../assets/img/greenFork.png')}/>
+                      </button>
+                    </Col>
+                  </div>
+                  <div className="ratings-box">
+
+                  </div>
+                  <p>{this.state.description}</p>
+                  <p>{this.state.address}</p>
+                  <Link to={`/restaurants/${this.props.params.id}/edit`}><button>Edit</button></Link>
+                </div>
+              </div>
+              <Footer />
             </div>
         );
     }

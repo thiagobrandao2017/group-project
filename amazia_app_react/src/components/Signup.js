@@ -75,7 +75,8 @@ class Signup extends Component {
                 </Col>
                 <Link className="link" to={`/login`}>
                   <Col sm={6} className="login-section">
-                  <h1 className="text-center main-text">LOG IN</h1>
+                    <img className="guest-logo" src={require('../assets/img/blackLogo.png')}/>
+                    <h1 className="text-center main-login-text">LOG IN</h1>
                   </Col>
                 </Link>
               </div>

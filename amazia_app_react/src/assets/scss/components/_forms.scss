@@ -1,0 +1,20 @@
+.edit-container {
+  margin-top: 130px;
+  background: $light-gray;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 130px;
+}
+
+.form {
+  h4 {
+    margin-left: 50px;
+    text-align: left;
+    font-weight: bold;
+  }
+  input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+  }
+}

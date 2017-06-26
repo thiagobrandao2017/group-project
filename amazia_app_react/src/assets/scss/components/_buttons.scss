@@ -29,8 +29,17 @@
   margin-top: 10px;
 }
 
+.fork-clicked {
+  display: none;
+}
+
 .fork:hover {
   opacity: 1;
+}
+
+.fork-big {
+  height: 60px;
+  margin-top: 20px;
 }
 
 .logout-btn {
