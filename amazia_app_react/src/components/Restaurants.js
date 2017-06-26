@@ -61,7 +61,7 @@ class Restaurants extends Component {
                         <p className="area-font">{this.props.restaurant.area}</p>
                       </Col>
                       <Col sm={5} className="text-right">
-                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="main-like-btn"></button>
+                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="main-like-btn"><FontAwesome onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} name="bookmark" className="bookmark" /></button>
                         <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
                           <FontAwesome name="chevron-right" className="text-right view-link"/>
                         </Link>

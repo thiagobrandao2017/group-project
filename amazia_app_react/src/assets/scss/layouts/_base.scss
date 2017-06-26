@@ -2,3 +2,12 @@ body {
   font-family: $font-p;
   color: $tertiary-color;
 }
+
+a {
+  color: $tertiary-color;
+}
+
+a:hover {
+  color: $tertiary-color;
+  text-decoration: none;
+}

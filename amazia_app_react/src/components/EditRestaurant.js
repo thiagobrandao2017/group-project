@@ -24,6 +24,7 @@ class EditRestaurant extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         axios
         .get(`http://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
             headers: {
@@ -85,13 +86,19 @@ class EditRestaurant extends Component {
                         <input onChange={this.handleChange.bind(this)} name="restaurant_name" type="text" value={this.state.restaurant_name} />
                       </div>
                       <div>
+                          <h4>Type of Food</h4>
+                      </div>
+                      <div>
+                          <input onChange={this.handleChange.bind(this)} name="type" type="text" placeholder="Restaurant's Name" value={this.state.type} />
+                      </div>
+                      <div>
                         <h4>Image</h4>
                       </div>
                       <div>
                           <input onChange={this.handleChange.bind(this)} name="img_url" type="text" value={this.state.img_url} />
                       </div>
                       <div>
-                          <h4>Location</h4>
+                          <h4>Area</h4>
                       </div>
                       <div>
                           <input onChange={this.handleChange.bind(this)} name="area" type="text" value={this.state.area} />
@@ -101,6 +108,12 @@ class EditRestaurant extends Component {
                       </div>
                       <div>
                           <textarea onChange={this.handleChange.bind(this)} name="description" type="text" value={this.state.description} />
+                      </div>
+                      <div>
+                          <h4>Rating</h4>
+                      </div>
+                      <div>
+                          <input onChange={this.handleChange.bind(this)} name="rating" type="number" value={this.state.rating} />
                       </div>
                       <div>
                           <h4>Address</h4>

@@ -13,12 +13,40 @@
 }
 
 .searchbar-container {
+  height: 80px;
   input {
-    margin-top: 20px;
+    // margin-top: 20px;
     border: $primary-color solid 3px;
     border-radius: 5px;
-    background: $white;
+    background: $primary-color;
     width: 100%;
     padding: 10px;
+  }
+}
+
+.area-dropdown {
+  padding: 15px;
+  margin-top: 15px;
+  width: 100%;
+  // background: $primary-color;
+}
+
+.area-dropdown, .dropdown-toggle, .btn, .btn-default {
+  margin-top: 0;
+}
+
+.btn-toolbar .btn, .btn-toolbar .btn-group, .btn-toolbar .input-group {
+  &:hover {
+    background: $white;
+  }
+  float: none;
+  width: 100%;
+}
+
+.dropdown-menu {
+  width: 100%;
+  li {
+    padding: 5px;
+    text-align: center;
   }
 }

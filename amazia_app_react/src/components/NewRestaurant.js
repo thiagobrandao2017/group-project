@@ -22,6 +22,10 @@ class NewRestaurant extends Component {
         }
     }
 
+    componentDidMount() {
+      window.scrollTo(0,0);
+    }
+
     handleSubmit(event) {
       event.preventDefault();
 
@@ -93,7 +97,7 @@ class NewRestaurant extends Component {
                   <input onChange={this.handleChange.bind(this)} name="rating" type="number"  />
               </div>
               <div>
-                  <h4>NYC Location</h4>
+                  <h4>Area</h4>
               </div>
               <div>
                   <input onChange={this.handleChange.bind(this)} name="area" type="text"  />
