@@ -51,9 +51,4 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.addEventListener('click', selectMenuItem);
   });
 
-  document.querySelectorAll('.like-btn').on('click', () => {
-    document.querySelectorAll('.fork-big').style.display = 'none';
-    document.querySelectorAll('.fork-clicked').style.display = 'block';
-  });
-
 });

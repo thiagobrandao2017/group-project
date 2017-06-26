@@ -181,8 +181,16 @@ body {
 
 .like-btn {
   border: none;
-  background: #ffffff;
-  color: #ffffff; }
+  background: transparent;
+  color: #ffffff;
+  width: auto; }
+
+.main-like-btn {
+  background: #89F8EA;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px; }
 
 .view-btn, .edit-btn {
   background: #ffffff;
@@ -213,12 +221,6 @@ body {
 .fork {
   height: 40px;
   margin-top: 10px; }
-
-.fork-clicked {
-  display: none; }
-
-.fork:hover {
-  opacity: 1; }
 
 .fork-big {
   height: 60px;
@@ -350,14 +352,16 @@ body {
   border-radius: 5px;
   margin-bottom: 130px; }
 
-.form h4 {
-  margin-left: 50px;
-  text-align: left;
-  font-weight: bold; }
-.form input, .form textarea {
-  width: 90%;
-  padding: 10px;
-  margin: 10px; }
+.form {
+  margin-top: 30px; }
+  .form h4 {
+    margin-left: 50px;
+    text-align: left;
+    font-weight: bold; }
+  .form input, .form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px; }
 
 .rest-name {
   color: #42f4ce;
@@ -410,5 +414,9 @@ body {
 
 .font-bold {
   font-weight: bold; }
+
+.favorites-container {
+  margin-top: 150px;
+  margin-bottom: 150px; }
 
 /*# sourceMappingURL=style.css.map */
