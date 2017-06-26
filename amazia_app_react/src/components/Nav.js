@@ -37,14 +37,9 @@ class Nav extends Component {
             <div>
                 <div id="menu-wrapper">
                   <ul id="menu">
-                    <li className="selected">My Favorites</li>
-                    <li>Second Item</li>
-                    <li>Third Item</li>
-                    <li>Fourth Item</li>
-                    <li>zFifth Item</li>
-                    <button onClick={this.handleLogout.bind(this)}>
-                        Logout
-                    </button>
+                    <Link to={'/favorites'}><li className="selected">My Favorites</li></Link>
+                    <Link to={'/restaurants/new'}><li>Add New Restaurant</li></Link>
+                    <a onClick={this.handleLogout.bind(this)}><li>Logout</li></a>
                   </ul>
                 </div>
 
