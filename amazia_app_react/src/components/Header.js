@@ -42,6 +42,7 @@ class Header extends Component {
     render() {
         return(
             <div>
+              <Nav />
               <div className="header-container">
                 <Col sm={3}>
                   <p className="welcome-text">{this.state.user.first_name}</p>

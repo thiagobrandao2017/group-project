@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import hamburger from '../assets/css/hamburger.css';
+import script from '../assets/script/script.js';
 
 class Nav extends Component {
     constructor(props) {

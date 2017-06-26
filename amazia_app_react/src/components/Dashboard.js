@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './Header';
+import Nav from './Nav';
 import Footer from './Footer';
 import SearchBar from './SearchBar';
 import Restaurants from './Restaurants';

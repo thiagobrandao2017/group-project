@@ -53,7 +53,7 @@
     border-radius: 4px;
     border: none;
     padding: 7px 14px;
-    background: $secondary-color;
+    background: $tertiary-color;
     color: $white;
   }
 }
@@ -74,7 +74,8 @@
 
 .link:hover {
   h1 {
-    color: $secondary-color;
+    color: $tertiary-color;
   }
   text-decoration: none;
+  opacity: 0.7;
 }
