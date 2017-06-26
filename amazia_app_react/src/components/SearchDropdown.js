@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
 import { ButtonToolbar, Dropdown, DropdownButton, MenuItem, Col } from 'react-bootstrap';
 
+// <Col className="food-search" md={6} className="searchBtn">
+// <ButtonToolbar className="food-search-bar">
+// <DropdownButton className="food-dropdown" bsStyle="default" title="Select Food" key="2">
+// <MenuItem eventKey="1">American</MenuItem>
+// <MenuItem eventKey="2">Brazilian</MenuItem>
+// <MenuItem eventKey="3">Chinese</MenuItem>
+// <MenuItem eventKey="4">Korean</MenuItem>
+// <MenuItem eventKey="5">Japanese</MenuItem>
+// <MenuItem eventKey="6">Italian</MenuItem>
+// <MenuItem eventKey="7">French</MenuItem>
+// <MenuItem eventKey="8">Mediterranean</MenuItem>
+// <MenuItem eventKey="9">Indian</MenuItem>
+// <MenuItem eventKey="10">Thai</MenuItem>
+// <MenuItem eventKey="11">Vietnamese</MenuItem>
+// <MenuItem eventKey="12">Pizza</MenuItem>
+// <MenuItem eventKey="13">Vegan</MenuItem>
+// <MenuItem eventKey="14">Mexican</MenuItem>
+// <MenuItem eventKey="15">Dessert</MenuItem>
+// <MenuItem eventKey="16">Other</MenuItem>
+// </DropdownButton>
+// </ButtonToolbar>
+// </Col>
+
 class SearchDropdown extends Component {
   constructor(props) {
     super(props);
@@ -29,28 +52,6 @@ class SearchDropdown extends Component {
             </ButtonToolbar>
           </Col>
 
-          <Col className="food-search" md={6} className="searchBtn">
-            <ButtonToolbar className="food-search-bar">
-              <DropdownButton className="food-dropdown" bsStyle="default" title="Select Food" key="2">
-                <MenuItem eventKey="1">American</MenuItem>
-                <MenuItem eventKey="2">Brazilian</MenuItem>
-                <MenuItem eventKey="3">Chinese</MenuItem>
-                <MenuItem eventKey="4">Korean</MenuItem>
-                <MenuItem eventKey="5">Japanese</MenuItem>
-                <MenuItem eventKey="6">Italian</MenuItem>
-                <MenuItem eventKey="7">French</MenuItem>
-                <MenuItem eventKey="8">Mediterranean</MenuItem>
-                <MenuItem eventKey="9">Indian</MenuItem>
-                <MenuItem eventKey="10">Thai</MenuItem>
-                <MenuItem eventKey="11">Vietnamese</MenuItem>
-                <MenuItem eventKey="12">Pizza</MenuItem>
-                <MenuItem eventKey="13">Vegan</MenuItem>
-                <MenuItem eventKey="14">Mexican</MenuItem>
-                <MenuItem eventKey="15">Dessert</MenuItem>
-                <MenuItem eventKey="16">Other</MenuItem>
-              </DropdownButton>
-            </ButtonToolbar>
-          </Col>
         </div>
       </div>
     );

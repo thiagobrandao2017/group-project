@@ -16,6 +16,7 @@ class Restaurants extends Component {
 
     handleClick(e) {
         console.log(e.target.dataset.id);
+
         axios
         .post('https://amazia-app.herokuapp.com/favorites/', {
             restaurant_id: e.target.dataset.id
@@ -39,34 +40,36 @@ class Restaurants extends Component {
     //     })
     // }
 
-
+    // <img className="fork" src="blackFork.png"/>
 
     render() {
         return(
           <section className="container-wrapper">
-            <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
               <Col md={6}>
                 <div className="card-container">
-                  <div className="image-box">
-                    <img className="img-thumbnail" src={this.props.restaurant.img_url} />
-                  </div>
+                  <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
+                    <div className="image-box">
+                      <img className="img-thumbnail" src={this.props.restaurant.img_url} />
+                    </div>
+                  </Link>
                   <div className="text-box">
                     <div className="row">
                       <Col sm={12}>
                         <h3>{this.props.restaurant.restaurant_name} <span className="food-type-font">{this.props.restaurant.type}</span></h3>
                       </Col>
-                      <Col sm={8}>
+                      <Col sm={7}>
                         <p className="area-font">{this.props.restaurant.area}</p>
                       </Col>
-                      <Col sm={4} className="text-right">
-                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="like-btn"><img className="fork" src="blackFork.png"/></button>
-                        <FontAwesome name="chevron-right" className="text-right view-link"/>
+                      <Col sm={5} className="text-right">
+                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="main-like-btn"></button>
+                        <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
+                          <FontAwesome name="chevron-right" className="text-right view-link"/>
+                        </Link>
                       </Col>
                     </div>
                   </div>
                 </div>
               </Col>
-            </Link>
           </section>
         );
     }
