@@ -15,9 +15,20 @@
   padding: 0;
 }
 
+.view-favorite {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transition: all 0.8s;
+}
+
 .favorite-card-box:hover {
   img {
     opacity: 0.7;
+  }
+  .view-favorite {
+    left: 90%;
   }
 }
 
@@ -36,8 +47,13 @@
   }
 }
 
+.favorite-text-col {
+  height: 100%;
+}
+
 .favorite-text-box {
   padding: 15px 30px;
+  height: 100%;
   h3 {
     font-weight: bold;
   }
