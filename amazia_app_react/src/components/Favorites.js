@@ -69,16 +69,7 @@ class Favorites extends Component {
 
                 {this.state.favorites.map((favorite, index) => {
                   return (
-<<<<<<< HEAD
-                    <div>
-                      <h1>{favorite.restaurant_name}</h1>
-                      <button onClick={this.destroyFavorite(index, favorite.id)}>
-                              Remove Favorite
-                      </button>
-                    </div>
-=======
                       <FavoritesList key={favorite.id} favorite={favorite} destroyFavorite={this.destroyFavorite.bind(this, index, favorite.id)}/>
->>>>>>> 3f06067392ad03777b7cbed6c9737fb3253dd59d
                   );
                 })}
               </div>
