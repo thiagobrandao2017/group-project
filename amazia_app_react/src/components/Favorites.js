@@ -32,7 +32,9 @@ class Favorites extends Component {
     }
     // <Favorite key={favorite.id} favorite={favorite} />
 
-    destroyFavorite(index, favoriteId, event) {
+    destroyFavorite(index, favoriteId) {
+            console.log(index);
+            console.log(favoriteId);
             axios
             .delete(`https://amazia-app.herokuapp.com/favorites/${favoriteId}`, {
                 headers: {
@@ -62,7 +64,7 @@ class Favorites extends Component {
                       <h1>{favorite.restaurant_name}</h1>
                       <button onClick={this.destroyFavorite(index, favorite.id)}>
                               Remove Favorite
-                          </button>
+                      </button>
                     </div>
                   );
 
