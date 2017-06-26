@@ -1,67 +1,35 @@
-
-.area-search, .food-search {
+.header-container {
+  background: #ffffff;
   width: 100%;
-  text-align: center; }
-
-.area-search-bar, .food-search-bar {
-  margin: 0 auto; }
-
-.dropBtn-type, .dropBtn-area {
-  padding: 15px;
-  font-size: 13px;
-  background: #fc0043;
-  border-radius: 10px; }
-
-.area-dropdown {
-  width: 500px; }
-
-.food-dropdown {
-  width: 500px; }
-
-body {
-  font-family: "Avenir"; }
-
-.header-section {
-  width: 100%;
-  background: #2C2D3D;
-  height: 60px;
+  height: 65px;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
-  padding: 10px; }
+  z-index: 200;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 9px #eeedf2; }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
+.main-logo {
+  width: 130px;
+  margin-top: 10px; }
+
+.welcome-text {
   font-weight: bold;
-  background: #F92116;
-  margin-left: 50px;
-  text-align: center;
-  font-size: 30px; }
+  font-size: 17px;
+  color: #2C2D3D; }
 
-.header-section {
-  width: 100%;
+.footer-section {
   background: #2C2D3D;
-  height: 60px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 10px; }
+  width: 100%;
+  height: 700px;
+  color: #ffffff; }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  font-weight: bold;
-  background: #F92116;
-  margin-left: 50px;
-  text-align: center;
-  font-size: 30px; }
+.footer-logo {
+  margin-left: 15px;
+  width: 70px; }
+
+.copyright {
+  margin-top: 600px; }
 
 .detail-view-container {
   width: 80%;
@@ -96,7 +64,7 @@ body {
     font-weight: bold; }
 
 .detail-text-box {
-  color: #2C2D3D;
+  color: #89F8EA;
   font-size: 18px;
   background: #eeedf2;
   padding: 40px; }
@@ -113,6 +81,9 @@ body {
   .btn-box .like-btn {
     border: #F92116 solid 4px; }
 
+.searchbar-container {
+  box-shadow: 1px 1px 7px #c4c2c2; }
+
 .search-section {
   position: fixed;
   left: 0;
@@ -124,14 +95,83 @@ body {
 
 .searchbar-container input {
   margin-top: 20px;
-  border: #2C2D3D solid 3px;
+  border: #89F8EA solid 3px;
   border-radius: 5px;
   background: #ffffff;
   width: 100%;
   padding: 10px; }
 
-.like-btn, .view-btn, .edit-btn {
-  padding: 10px 12px;
+.guest-logo {
+  width: 100px;
+  position: relative;
+  top: -15px;
+  left: 70%; }
+
+.board-container {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #888888; }
+  .board-container h1 {
+    font-weight: bold; }
+
+.signup-section {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #89F8EA; }
+
+.login-section {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #ffffff; }
+
+.login-text {
+  margin-top: 70px; }
+
+.signup-section, .login-section {
+  height: 100%;
+  padding: 30px; }
+
+.form-container {
+  width: 90%;
+  margin: 0 auto; }
+  .form-container input {
+    width: 100%;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 7px; }
+  .form-container button {
+    margin-top: 20px;
+    border-radius: 4px;
+    border: none;
+    padding: 7px 14px;
+    background: #2C2D3D;
+    color: #ffffff; }
+
+.main-text {
+  margin-top: 45%; }
+
+.main-login-text {
+  margin-top: 38%; }
+
+.link h1 {
+  color: #2C2D3D; }
+
+.link:hover {
+  text-decoration: none;
+  opacity: 0.7; }
+  .link:hover h1 {
+    color: #2C2D3D; }
+
+body {
+  font-family: "Comfortaa", "Avenir", "sans-serif";
+  color: #2C2D3D; }
+
+.view-btn, .edit-btn, .back-btn {
+  padding: 7px 10px;
   border: none;
   border-radius: 5px;
   margin-left: 12px;
@@ -140,55 +180,115 @@ body {
   width: 100px; }
 
 .like-btn {
-  background: #F92116;
+  border: none;
+  background: #ffffff;
   color: #ffffff; }
 
 .view-btn, .edit-btn {
   background: #ffffff;
   color: #2C2D3D; }
 
-.edit-btn {
+.edit-btn, .back-btn {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-top: 50px;
   box-sizing: border-box;
-  border: #2C2D3D solid 4px; }
+  border: #89F8EA solid 4px; }
+
+.edit-btn:hover {
+  background: #89F8EA;
+  color: #ffffff; }
+
+.back-btn {
+  background: #ffffff;
+  border: #6d7271 solid 4px;
+  color: #2C2D3D;
+  margin-left: 20px; }
+
+.back-btn:hover {
+  background: #6d7271;
+  color: #ffffff; }
+
+.fork {
+  height: 40px;
+  margin-top: 10px; }
+
+.fork-clicked {
+  display: none; }
+
+.fork:hover {
+  opacity: 1; }
+
+.fork-big {
+  height: 60px;
+  margin-top: 20px; }
+
+.logout-btn {
+  background: #89F8EA;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 13px; }
+
+.dashboard-container {
+  padding-bottom: 150px; }
 
 .container-wrapper {
   width: 100%;
-  margin-top: 100px; }
+  margin-top: 200px;
+  box-sizing: border-box; }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   margin: 0 auto; }
 
+.card-link:hover .img-thumbnail {
+  opacity: 0.7; }
+
 .card-container {
-  padding: 20px;
-  margin-top: 80px;
-  overflow: hidden; }
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #c4c2c2;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Comfortaa", "Avenir", "sans-serif"; }
   .card-container .image-box {
-    background-size: cover;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow: hidden; }
-    .card-container .image-box img {
-      width: 300px; }
+    .card-container .image-box .img-thumbnail {
+      width: 100%;
+      padding: 0;
+      margin: 0; }
   .card-container .text-box {
-    background: #2C2D3D;
+    background: #ffffff;
     width: 100%;
-    height: auto;
-    margin-top: -30px;
+    height: 120px;
     padding: 20px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
     .card-container .text-box h3 {
-      color: #ffffff;
+      color: #2C2D3D;
       margin: 0; }
     .card-container .text-box .food-type-font {
-      color: #eeedf2; }
+      font-size: 15px;
+      color: #2C2D3D; }
     .card-container .text-box .area-font {
-      font-size: 17px;
+      font-size: 13px;
       color: gray; }
+    .card-container .text-box .view-link {
+      margin-left: 25px;
+      color: #2C2D3D;
+      font-size: 20px; }
+    .card-container .text-box .view-link:visited {
+      color: #2C2D3D; }
 
 .caption-wrapper {
-  padding: 20px;
   height: 100%;
   top: 100%;
   left: 0;
@@ -205,6 +305,93 @@ body {
   .caption button {
     margin-top: 70px; }
 
+.single-container {
+  box-shadow: 5px 10px 5px #eeedf2, -5px 10px 5px #eeedf2;
+  padding: 0; }
+
+.single-img-box {
+  width: 100%;
+  overflow: hidden;
+  height: 500px; }
+  .single-img-box img {
+    width: 100%;
+    padding: 0; }
+
+.single-text-box {
+  padding: 50px 70px 180px 80px; }
+
+.area-font {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #6d7271; }
+
+.ratings-box {
+  padding: 15px 0; }
+
+.desc-font {
+  font-size: 22px;
+  padding: 20px 150px 20px 0; }
+
+.a-font {
+  font-size: 17px;
+  color: #42f4ce;
+  font-weight: bold; }
+
+.span-font {
+  font-size: 20px;
+  color: #232323;
+  font-weight: normal; }
+
+.edit-container {
+  margin-top: 130px;
+  background: #eeedf2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 130px; }
+
+.form h4 {
+  margin-left: 50px;
+  text-align: left;
+  font-weight: bold; }
+.form input, .form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px; }
+
+.rest-name {
+  color: #42f4ce;
+  font-weight: bold; }
+
+.searchbar-container {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  background: #eeedf2;
+  padding: 10px 0;
+  z-index: 100; }
+
+.area-search, .food-search {
+  text-align: center; }
+
+.area-search-bar, .food-search-bar {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%; }
+
+.dropBtn-type, .dropBtn-area {
+  padding: 15px;
+  font-size: 13px;
+  background: #89F8EA;
+  border-radius: 10px; }
+
+.area-dropdown {
+  width: 100%; }
+
+.food-dropdown {
+  width: 100%; }
+
 .text-right {
   text-align: right; }
 
@@ -219,6 +406,9 @@ body {
 
 .address-font {
   color: #F92116;
+  font-weight: bold; }
+
+.font-bold {
   font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

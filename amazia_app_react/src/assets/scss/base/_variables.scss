@@ -3,26 +3,28 @@ $white: #ffffff;
 $black: #0b0b0b;
 $gray: #232323;
 $light-gray: #eeedf2;
-<<<<<<< HEAD
+$mid-gray: #6d7271;
 $deep-purple-gray: #3a3947;
 $red: #fc0043;
 $neon-yellow: #eaff0a;
+$shadow: #c4c2c2;
 
-$primary-color: $red;
-=======
 $deep-purple-gray: #2C2D3D;
 $pastel-red: #F7987C;
 $pastel-green: #89F8EA;
+$deep-pastel-green: #42f4ce;
 $bright-blue: #1BC9EA;
 $red: #F92116;
 
-$primary-color: $deep-purple-gray;
+$primary-color: $pastel-green;
 $secondary-color: $red;
-$tertiary-color: $pastel-green;
->>>>>>> d1d0e6d459aadb8ddc9a0994efc43c8fdf64521b
+$tertiary-color: $deep-purple-gray;
 
 //Font
 $base-font-size: 15px;
 $bold-font-size: 17px;
+
+$font-h: "Baloo", "Avenir", "sans-serif";
+$font-p: "Comfortaa",  "Avenir", "sans-serif";
 
 $primary-font-family: "Avenir";

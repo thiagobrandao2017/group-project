@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Restaurants from './Restaurants';
-import Nav from './Nav';
 import Header from './Header';
+import Nav from './Nav';
 import Footer from './Footer';
 import SearchBar from './SearchBar';
+import Restaurants from './Restaurants';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    // Equivalent to $.ajax in jQeury, axios is just a different library
     axios
     .get('https://amazia-app.herokuapp.com/restaurants', {
         headers: {
@@ -26,7 +25,6 @@ class Dashboard extends Component {
     .then((response) => {
       const restaurantsData = response.data;
 
-      // Set state with owners from API
       this.setState({
         restaurants: restaurantsData,
       });
@@ -38,11 +36,10 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div>
-        <Nav />
+      <section>
         <Header />
         <SearchBar />
-        <div>
+        <div className="container dashboard-container">
           {this.state.restaurants.map((restaurant) => {
             return (
               <Restaurants key={restaurant.id} restaurant={restaurant} />
@@ -50,7 +47,7 @@ class Dashboard extends Component {
           })}
         </div>
         <Footer />
-      </div>
+      </section>
     );
   }
 }

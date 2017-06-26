@@ -32,14 +32,38 @@ class Favorites extends Component {
     }
     // <Favorite key={favorite.id} favorite={favorite} />
 
+    destroyFavorite(index, favoriteId, event) {
+            axios
+            .delete(`https://amazia-app.herokuapp.com/favorites/${favoriteId}`, {
+                headers: {
+                    'Authorization': window.localStorage.getItem('token'),
+                }
+            })
+            .then(() => {
+                this.state.favorites.splice(index, 1);
+
+                this.setState({
+                    favorites: this.state.favorites
+                });
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+        }
+
     render() {
         return(
             <div>
               <div>
               Hi
-                {this.state.favorites.map((favorite) => {
+                {this.state.favorites.map((favorite, index) => {
                   return (
-                    <h1>{favorite.restaurant_name}</h1>
+                    <div>
+                      <h1>{favorite.restaurant_name}</h1>
+                      <button onClick={this.destroyFavorite(index, favorite.id)}>
+                              Remove Favorite
+                          </button>
+                    </div>
                   );
 
                 })}

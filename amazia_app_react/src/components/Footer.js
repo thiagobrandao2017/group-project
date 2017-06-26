@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import whiteLogo from '../assets/img/whiteLogo.png';
 
 class Footer extends Component {
     constructor(props) {
@@ -8,7 +9,11 @@ class Footer extends Component {
     render() {
         return(
             <section className="footer-section">
-                <p>copyright AMAZIA</p>
+              <div className="container">
+                <div className="copyright text-center">
+                  <p>copyright <img className="footer-logo" src={require('../assets/img/whiteLogo.png')} /></p>
+                </div>
+              </div>
             </section>
         );
     }

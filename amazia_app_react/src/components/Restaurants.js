@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { ButtonToolbar, MenuItem, Col } from 'react-bootstrap';
+import blackFork from '../assets/img/blackFork.png';
+import { ButtonToolbar, MenuItem, Col, Grid, Row, Dropdown } from 'react-bootstrap';
+import FontAwesome from 'react-fontawesome';
 import { Link, browserHistory } from 'react-router';
 
 class Restaurants extends Component {
@@ -41,29 +43,31 @@ class Restaurants extends Component {
 
     render() {
         return(
-              <section className="container-wrapper">
-                <Col md={6}>
+          <section className="container-wrapper">
+            <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
+              <Col md={6}>
+                <div className="card-container">
                   <div className="image-box">
+                    <img className="img-thumbnail" src={this.props.restaurant.img_url} />
                   </div>
                   <div className="text-box">
                     <div className="row">
-                      <Col sm={4}>
-                        <h3>{this.props.restaurant.restaurant_name}</h3>
+                      <Col sm={12}>
+                        <h3>{this.props.restaurant.restaurant_name} <span className="food-type-font">{this.props.restaurant.type}</span></h3>
                       </Col>
-                      <Col sm={8} className="text-right">
-                        <p className="area-font"><span className="food-type-font">{this.props.restaurant.type}</span> {this.props.restaurant.area}</p>
+                      <Col sm={8}>
+                        <p className="area-font">{this.props.restaurant.area}</p>
+                      </Col>
+                      <Col sm={4} className="text-right">
+                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="like-btn"><img className="fork" src="blackFork.png"/></button>
+                        <FontAwesome name="chevron-right" className="text-right view-link"/>
                       </Col>
                     </div>
                   </div>
-
-                  <div className="caption-wrapper">
-                    <div className="caption">
-                      <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="like-btn">Like</button>
-                      <Link to={`/restaurants/${this.props.restaurant.id}`} className="view-btn">View</Link>
-                    </div>
-                  </div>
-                </Col>
-              </section>
+                </div>
+              </Col>
+            </Link>
+          </section>
         );
     }
 }

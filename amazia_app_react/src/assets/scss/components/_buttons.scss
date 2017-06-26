@@ -1,5 +1,5 @@
-.like-btn, .view-btn, .edit-btn {
-  padding: 10px 12px;
+.view-btn, .edit-btn, .back-btn {
+  padding: 7px 10px;
   border: none;
   border-radius: 5px;
   margin-left: 12px;
@@ -9,7 +9,8 @@
 }
 
 .like-btn {
-  background: $secondary-color;
+  border: none;
+  background: $white;
   color: $white;
 }
 
@@ -18,7 +19,53 @@
   color: $deep-purple-gray;
 }
 
-.edit-btn {
+.edit-btn, .back-btn {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-top: 50px;
   box-sizing: border-box;
   border: $primary-color solid 4px;
+}
+
+.edit-btn:hover {
+  background: $primary-color;
+  color: $white;
+}
+
+.back-btn {
+  background: $white;
+  border: $mid-gray solid 4px;
+  color: $tertiary-color;
+  margin-left: 20px;
+}
+
+.back-btn:hover {
+  background: $mid-gray;
+  color: $white;
+}
+
+.fork {
+  height: 40px;
+  margin-top: 10px;
+}
+
+.fork-clicked {
+  display: none;
+}
+
+.fork:hover {
+  opacity: 1;
+}
+
+.fork-big {
+  height: 60px;
+  margin-top: 20px;
+}
+
+.logout-btn {
+  background: $primary-color;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 13px;
 }

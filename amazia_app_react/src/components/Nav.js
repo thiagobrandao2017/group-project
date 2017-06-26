@@ -8,17 +8,28 @@ class Nav extends Component {
         super(props)
     }
 
+    handleLogout(event) {
+        event.preventDefault();
+
+        window.localStorage.removeItem('token');
+
+        browserHistory.push('login');
+    }
+
     render() {
         return(
             <div>
                 <div id="menu-wrapper">
-                    <ul id="menu">
-                    <li className="selected"><Link to="users/1/favorites">My Favorites</Link></li>
-                    <li><a href="#">Second Item</a></li>
-                    <li><a href="#">Third Item</a></li>
-                    <li><a href="#">Fourth Item</a></li>
-                    <li><a href="#">Fifth Item</a></li>
-                    </ul>
+                  <ul id="menu">
+                    <li className="selected">My Favorites</li>
+                    <li>Second Item</li>
+                    <li>Third Item</li>
+                    <li>Fourth Item</li>
+                    <li>zFifth Item</li>
+                    <button onClick={this.handleLogout.bind(this)}>
+                        Logout
+                    </button>
+                  </ul>
                 </div>
 
                 <div id="content-wrapper">

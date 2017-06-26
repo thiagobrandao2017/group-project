@@ -1,67 +1,84 @@
 // Restaurants' Card
+.dashboard-container {
+  padding-bottom: 150px;
+}
+
 .container-wrapper {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 200px;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   margin: 0 auto;
 }
 
+.card-link:hover {
+  .img-thumbnail {
+      opacity: 0.7;
+  }
+}
+
 .card-container {
-  padding: 20px;
-  margin-top: 80px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px $shadow;
+  width: 100%;
   overflow: hidden;
+  font-family: $font-p;
   .image-box {
-    img {
-      width: 300px;
+    .img-thumbnail {
+      width: 100%;
+      padding: 0;
+      margin: 0;
     }
-    background-size: cover;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
   }
   .text-box {
-    background: $primary-color;
+    background: $white;
     width: 100%;
-    height: auto;
-    margin-top: -30px;
+    height: 120px;
     padding: 20px;
     box-sizing: border-box;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     h3 {
-      color: $white;
+      color: $tertiary-color;
       margin: 0;
     }
     .food-type-font {
-      color: $light-gray;
+      font-size: 15px;
+      color: $tertiary-color;
     }
     .area-font {
-      font-size: 17px;
+      font-size: 13px;
       color: gray;
     }
+    .view-link {
+      margin-left: 25px;
+      color: $tertiary-color;
+      font-size: 20px;
+    }
+    .view-link:visited {
+      color: $tertiary-color;
+    }
   }
-  // &:hover {
-  //   .caption-wrapper {
-  //     top: 0;
-  //   }
-  // }
 
 }
 
 .caption-wrapper {
-  padding: 20px;
-  // position: absolute;
-  // width: 100%;
   height: 100%;
   top: 100%;
   left: 0;
   right:0;
   bottom: -200px;
-  // visibility: hidden;
-  // opacity: 0;
-  // transition: all .5s;
 }
 
 .caption {

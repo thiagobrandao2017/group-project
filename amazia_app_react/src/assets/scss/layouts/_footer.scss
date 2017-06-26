@@ -1,22 +1,15 @@
-.header-section {
+.footer-section {
+  background: $tertiary-color;
   width: 100%;
-  background: $primary-color;
-  height: 60px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 10px;
+  height: 700px;
+  color: $white;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: $white;
-  font-weight: bold;
-  background: $secondary-color;
-  margin-left: 50px;
-  text-align: center;
-  font-size: 30px;
+.footer-logo {
+  margin-left: 15px;
+  width: 70px;
+}
+
+.copyright {
+  margin-top: 600px;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Col } from 'react-bootstrap';
 import { Link, browserHistory } from 'react-router';
 
 class Login extends Component {
@@ -42,29 +43,36 @@ class Login extends Component {
     render() {
         return(
 
-            <div>
-                <div className="small-container well">
-                    <form onSubmit={this.handleSubmit.bind(this)}>
-                        <h2>Login</h2>
-
-                        <div className="margin-top-20">
-                            <input onChange={this.handleChange.bind(this)} name="email" type="email" className="form-control" placeholder="Email Address" />
+          <section>
+            <div className="container">
+              <div className="board-container">
+                <Link className="link" to={`/signup`}>
+                  <Col sm={6} className="signup-section">
+                  <h1 className="text-center main-text">SIGN UP</h1>
+                  </Col>
+                </Link>
+                <Col sm={6} className="login-section">
+                  <img className="guest-logo" src={require('../assets/img/blackLogo.png')}/>
+                  <h1 className="text-center login-text">LOG IN</h1>
+                  <div className="form-container">
+                    <form className="form-container" onSubmit={this.handleSubmit.bind(this)}>
+                        <div>
+                            <input onChange={this.handleChange.bind(this)} name="email" type="email" placeholder="Email Address" />
                         </div>
 
-                        <div className="margin-top-20">
-                            <input onChange={this.handleChange.bind(this)} name="password" type="password" className="form-control" placeholder="Password" />
+                        <div>
+                            <input onChange={this.handleChange.bind(this)} name="password" type="password" placeholder="Password" />
                         </div>
 
-                        <div className="margin-top-20">
-                            <button type="submit" className="btn btn-primary">Login</button>
-                        </div>
-
-                        <div className="margin-top-10">
-                            <Link to="/signup">Create an account</Link>
+                        <div className="text-center">
+                            <button type="submit">Login</button>
                         </div>
                     </form>
-                </div>
+                  </div>
+                </Col>
+              </div>
             </div>
+          </section>
         );
     }
 }
