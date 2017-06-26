@@ -1,4 +1,4 @@
-.view-btn, .edit-btn {
+.view-btn, .edit-btn, .back-btn {
   padding: 7px 10px;
   border: none;
   border-radius: 5px;
@@ -19,9 +19,30 @@
   color: $deep-purple-gray;
 }
 
-.edit-btn {
+.edit-btn, .back-btn {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-top: 50px;
   box-sizing: border-box;
   border: $primary-color solid 4px;
+}
+
+.edit-btn:hover {
+  background: $primary-color;
+  color: $white;
+}
+
+.back-btn {
+  background: $white;
+  border: $mid-gray solid 4px;
+  color: $tertiary-color;
+  margin-left: 20px;
+}
+
+.back-btn:hover {
+  background: $mid-gray;
+  color: $white;
 }
 
 .fork {

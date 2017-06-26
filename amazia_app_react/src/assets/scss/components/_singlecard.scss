@@ -6,7 +6,7 @@
 .single-img-box {
   width: 100%;
   overflow: hidden;
-  height: 450px;
+  height: 500px;
   img {
     width: 100%;
     padding: 0;
@@ -14,14 +14,29 @@
 }
 
 .single-text-box {
-  padding: 20px 40px 150px 40px;
-  p {
-    font-size: 17px;
-  }
+  padding: 50px 40px 180px 40px;
+}
+
+.area-font {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: $mid-gray;
 }
 
 .ratings-box {
   padding: 15px 0;
+}
+
+.desc-font {
+  font-size: 22px;
+  padding: 20px 150px 20px 0;
+}
+
+.a-font {
+  font-size: 17px;
+  color: $deep-pastel-green;
+  font-weight: bold;
 }
 
 .span-font {

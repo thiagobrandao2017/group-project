@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
-import { browserHistory } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 import Nav from './Nav';
 
@@ -54,7 +54,7 @@ class EditRestaurant extends Component {
             }
         })
         .then(() => {
-            browserHistory.push('/');
+            browserHistory.push(`/restaurants/${this.props.params.id}`);
         })
         .catch((err) => {
             console.log(err);
@@ -76,7 +76,7 @@ class EditRestaurant extends Component {
 
               <div className="container">
                 <div className="edit-container text-center">
-                  <h2>Edit {this.state.restaurant_name}</h2>
+                  <h2>Edit <span className="rest-name">{this.state.restaurant_name}</span></h2>
                   <form className="form" onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                       <h4>Restaurant's Name</h4>
@@ -109,6 +109,7 @@ class EditRestaurant extends Component {
                           <input onChange={this.handleChange.bind(this)} name="address" type="text" value={this.state.address} />
                       </div>
                       <button className="edit-btn" type="submit">Submit</button>
+                      <Link to={`/restaurants/${this.props.params.id}`}><button className="back-btn">Back</button></Link>
                   </form>
                 </div>
               </div>

@@ -21,7 +21,7 @@
 .footer-section {
   background: #2C2D3D;
   width: 100%;
-  height: 100px;
+  height: 700px;
   color: #ffffff; }
 
 .footer-logo {
@@ -29,7 +29,7 @@
   width: 70px; }
 
 .copyright {
-  margin-top: 50px; }
+  margin-top: 600px; }
 
 .detail-view-container {
   width: 80%;
@@ -169,7 +169,7 @@ body {
   font-family: "Comfortaa", "Avenir", "sans-serif";
   color: #2C2D3D; }
 
-.view-btn, .edit-btn {
+.view-btn, .edit-btn, .back-btn {
   padding: 7px 10px;
   border: none;
   border-radius: 5px;
@@ -187,9 +187,27 @@ body {
   background: #ffffff;
   color: #2C2D3D; }
 
-.edit-btn {
+.edit-btn, .back-btn {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-top: 50px;
   box-sizing: border-box;
   border: #89F8EA solid 4px; }
+
+.edit-btn:hover {
+  background: #89F8EA;
+  color: #ffffff; }
+
+.back-btn {
+  background: #ffffff;
+  border: #6d7271 solid 4px;
+  color: #2C2D3D;
+  margin-left: 20px; }
+
+.back-btn:hover {
+  background: #6d7271;
+  color: #ffffff; }
 
 .fork {
   height: 40px;
@@ -225,7 +243,7 @@ body {
   margin: 0 auto; }
 
 .card-link:hover .img-thumbnail {
-  opacity: 0.8; }
+  opacity: 0.7; }
 
 .card-container {
   margin-top: 20px;
@@ -293,18 +311,31 @@ body {
 .single-img-box {
   width: 100%;
   overflow: hidden;
-  height: 450px; }
+  height: 500px; }
   .single-img-box img {
     width: 100%;
     padding: 0; }
 
 .single-text-box {
-  padding: 20px 40px 150px 40px; }
-  .single-text-box p {
-    font-size: 17px; }
+  padding: 50px 40px 180px 40px; }
+
+.area-font {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #6d7271; }
 
 .ratings-box {
   padding: 15px 0; }
+
+.desc-font {
+  font-size: 22px;
+  padding: 20px 150px 20px 0; }
+
+.a-font {
+  font-size: 17px;
+  color: #42f4ce;
+  font-weight: bold; }
 
 .span-font {
   font-size: 20px;
@@ -326,6 +357,10 @@ body {
   width: 90%;
   padding: 10px;
   margin: 10px; }
+
+.rest-name {
+  color: #42f4ce;
+  font-weight: bold; }
 
 .searchbar-container {
   position: fixed;
