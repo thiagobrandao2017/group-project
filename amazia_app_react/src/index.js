@@ -21,7 +21,7 @@ const restrict = () => {
 }
 
 ReactDom.render(
-    <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+    <Router history={browserHistory}>
       <Route path='/' component={Dashboard} onEnter={restrict} />
       <Route path='/guest' component={GuestDashboard} />
       <Route path='/signup' component={Signup} />

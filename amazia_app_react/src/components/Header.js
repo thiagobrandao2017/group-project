@@ -23,7 +23,7 @@ class Header extends Component {
       })
       .then((response) => {
         this.setState({
-          user: response.data,
+          user: window.localStorage.getItem('user'),
         });
       })
       .catch((err) => {
@@ -45,7 +45,7 @@ class Header extends Component {
               <Nav />
               <div className="header-container">
                 <Col sm={3}>
-                  <p className="welcome-text">{this.state.user.first_name}</p>
+                  <p className="welcome-text">Hi, {this.state.user}</p>
                 </Col>
                 <Col sm={6}>
                   <div className="text-center">

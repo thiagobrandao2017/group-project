@@ -22,6 +22,7 @@ class Restaurant extends Component {
     }
 
     componentDidMount() {
+      window.scrollTo(0,0);
       axios
       .get(`http://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
           headers: {
@@ -49,6 +50,7 @@ class Restaurant extends Component {
             }
         })
         .then(() => {
+
             browserHistory.push(`/restaurants/${this.props.params.id}`);
         })
         .catch((err) => {
@@ -72,7 +74,7 @@ class Restaurant extends Component {
                     </Col>
                     <Col sm={1}>
                       <button onClick={(e) => this.handleClick(e)} className="like-btn"><img className="fork-big" src={require('../assets/img/blackFork.png')}/>
-                      <img className="fork-big fork-clicked" src={require('../assets/img/greenFork.png')}/>
+
                       </button>
                     </Col>
                   </div>

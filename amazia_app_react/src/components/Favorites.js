@@ -16,6 +16,7 @@ class Favorites extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         axios
         .get('https://amazia-app.herokuapp.com/favorites', {
             headers: {
@@ -55,18 +56,12 @@ class Favorites extends Component {
             });
         }
 
-        // <div className="favorites-container" key={favorite.id}>
-        // <h1>{favorite.restaurant_name}</h1>
-        // <button key={favorite.id} onClick={this.destroyFavorite.bind(this, index, favorite.id)}>
-        // Remove Favorite
-        // </button>
-        // </div>
     render() {
         return(
             <div>
               <Header />
-              <div className="container">
-
+              <div className="favorites-container">
+                <h1 className="text-center">Forked List</h1>
                 {this.state.favorites.map((favorite, index) => {
                   return (
                       <FavoritesList key={favorite.id} favorite={favorite} destroyFavorite={this.destroyFavorite.bind(this, index, favorite.id)}/>

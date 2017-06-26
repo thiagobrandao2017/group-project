@@ -33,7 +33,7 @@ class SearchDropdown extends Component {
     return (
       <div className="searchbar-container">
         <div className="container">
-          <Col className="area-search" md={6} className="searchBtn">
+          <Col className="area-search" md={12} className="searchBtn">
             <ButtonToolbar className="area-search-bar">
               <DropdownButton className="area-dropdown" bsStyle="default" title="Select Area" key="1">
                 <MenuItem eventKey="1">East Village</MenuItem>
