@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import axios from 'axios';
 import blackFork from '../assets/img/blackFork.png';
@@ -42,7 +43,10 @@ class Restaurants extends Component {
 
     // <img className="fork" src="blackFork.png"/>
 
+    // ternary operator goes in const bookmark below
+    // if bookmark is true render this if not render this
     render() {
+        const bookmark = <FontAwesome onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} name="bookmark" className="bookmark" />
         return(
           <section className="container-wrapper">
               <Col md={6}>
@@ -60,8 +64,8 @@ class Restaurants extends Component {
                       <Col sm={7}>
                         <p className="area-font">{this.props.restaurant.area}</p>
                       </Col>
-                      <Col sm={5} className="text-right">
-                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="main-like-btn"><FontAwesome onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} name="bookmark" className="bookmark" /></button>
+                      <Col sm={5}>
+                        <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="main-like-btn">{bookmark}</button>
                         <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
                           <FontAwesome name="chevron-right" className="text-right view-link"/>
                         </Link>
@@ -73,6 +77,10 @@ class Restaurants extends Component {
           </section>
         );
     }
+}
+
+Restaurants.propTypes = {
+  restaurants: PropTypes.array
 }
 
 export default Restaurants;

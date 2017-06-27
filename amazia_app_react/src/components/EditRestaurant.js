@@ -69,7 +69,6 @@ class EditRestaurant extends Component {
     }
 
 
-
     render() {
         return(
             <div>

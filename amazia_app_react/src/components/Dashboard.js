@@ -12,7 +12,9 @@ class Dashboard extends Component {
 
     this.state = {
       restaurants: [],
+      filteredRestaurants: []
     }
+    this.onSelectArea = this.onSelectArea.bind(this);
   }
 
   componentDidMount() {
@@ -24,25 +26,32 @@ class Dashboard extends Component {
     })
     .then((response) => {
       const restaurantsData = response.data;
-
+      console.log(response.data)
       this.setState({
         restaurants: restaurantsData,
+        filteredRestaurants: restaurantsData
       });
+      console.log(this.state)
     })
     .catch((err) => {
       console.log(err);
     });
   }
 
+  onSelectArea(each) {
+    (each === "All") ? this.setState({ filteredRestaurants: this.state.restaurants }):
+    this.setState({ filteredRestaurants: this.state.restaurants.filter(x => x.area === each) });
+  }
+
   render() {
     return (
       <section>
         <Header />
-        <SearchBar />
+        <SearchBar onSelectArea={this.onSelectArea} />
         <div className="container dashboard-container">
-          {this.state.restaurants.map((restaurant) => {
+          {this.state.filteredRestaurants.map((restaurant) => {
             return (
-              <Restaurants key={restaurant.id} restaurant={restaurant} />
+              <Restaurants key={restaurant.id} restaurant={restaurant}/>
             );
           })}
         </div>

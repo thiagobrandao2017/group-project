@@ -27,10 +27,12 @@ class FavoritesList extends Component {
                         <img src={this.props.favorite.img_url} />
                       </div>
                     </Col>
-                    <Col md={7}>
+                    <Col md={7} className="favorite-text-col">
                       <div className="favorite-text-box">
-                        <h3 className="text-center">{this.props.favorite.restaurant_name} <span className="food-type-font">{this.props.favorite.type}</span></h3>
+                        <h2>{this.props.favorite.restaurant_name} <span className="food-type-font">{this.props.favorite.type}</span></h2>
+                        <h4>{this.props.favorite.area}</h4>
                       </div>
+                      <FontAwesome name="chevron-right" className="text-right view-favorite" />
                     </Col>
                   </div>
                   </Link>

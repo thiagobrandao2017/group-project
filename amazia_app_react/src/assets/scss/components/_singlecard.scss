@@ -10,7 +10,28 @@
   img {
     width: 100%;
     padding: 0;
+    margin-top: -70px;
   }
+}
+
+.view-container {
+  height: 100vh;
+  margin-top: 65px;
+  img {
+    margin-left: -90px;
+  }
+}
+
+.view-img-box {
+  overflow: hidden;
+  box-shadow: 5px -5px 5px $shadow;
+  img {
+    height: 100vh;
+  }
+}
+
+.view-text-box {
+  padding: 50px;
 }
 
 .single-text-box {
@@ -33,10 +54,24 @@
   padding: 20px 150px 20px 0;
 }
 
-.a-font {
+.desc-font-view {
+  font-size: 20px;
+  padding: 70px 150px 40px 20px;
+  margin-top: 90px;
+}
+
+.a-font, .a-font-view {
   font-size: 17px;
-  color: $deep-pastel-green;
+  color: $deeper-pastel-green;
   font-weight: bold;
+}
+
+.a-font-view {
+  padding-left: 20px;
+}
+
+.edit-btn-margin {
+  margin-left: 20px;
 }
 
 .span-font {

@@ -11,6 +11,7 @@ class Header extends Component {
 
         this.state = {
           user: [],
+          mouseEnter: false
         }
     }
 
@@ -39,13 +40,20 @@ class Header extends Component {
         browserHistory.push('guest');
     }
 
+    changeColor() {
+      this.setState({
+        mouseEnter: true
+      })
+    }
+
     render() {
+        const colorClass = this.state.mouseEnter ? "red" : "blue";
         return(
             <div>
               <Nav />
               <div className="header-container">
                 <Col sm={3}>
-                  <p className="welcome-text">Hi, {this.state.user}</p>
+                  <h4 className="welcome-text">Hi, {this.state.user}</h4>
                 </Col>
                 <Col sm={6}>
                   <div className="text-center">
@@ -58,7 +66,7 @@ class Header extends Component {
 
                 </Col>
                 <div className="text-right">
-                  <button className="logout-btn" onClick={this.handleLogout.bind(this)}>
+                  <button className={`logout-btn ${colorClass}`} onMouseEnter={() => this.changeColor()} onClick={this.handleLogout.bind(this)}>
                     Logout
                   </button>
                 </div>

@@ -10,7 +10,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <SearchDropdown />
+        <SearchDropdown onSelectArea={this.props.onSelectArea} />
       </div>
     );
   }
