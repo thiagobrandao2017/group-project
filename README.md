@@ -1,6 +1,8 @@
 # AMAZIA APP
 New York City restaurant app made for true food lovers.
 
+https://amazia.herokuapp.com/
+
 
 ## User Stories
 
