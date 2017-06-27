@@ -26,6 +26,6 @@ class SearchDropdown extends Component {
 
 export default SearchDropdown;
 SearchDropdown.defaultProps = {
-  location: ["East Village", "West Village", "Gramercy Park", "UES", "UWS", "Hells Kitchen", "Lower East Side",
-  "Union Square Park", "Little Italy", "Financial District", "All"]
+  location: ["East Village", "West Village", "Gramercy Park", "Washington Square Park", "Madison Square Park", "Hells Kitchen", "Lower East Side",
+  "Union Square Park", "Little Italy", "Financial District", "Long Island City", "All"]
 }
