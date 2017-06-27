@@ -104,11 +104,16 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background: #89F8EA; }
+  .signup-section:hover {
+    background: #38f7dd; }
 
 .login-section {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background: #ffffff; }
+
+.login-section-gray:hover {
+  background: #eeedf2; }
 
 .login-text {
   margin-top: 70px; }
@@ -143,8 +148,7 @@
   color: #2C2D3D; }
 
 .link:hover {
-  text-decoration: none;
-  opacity: 0.7; }
+  text-decoration: none; }
   .link:hover h1 {
     color: #2C2D3D; }
 
@@ -316,7 +320,8 @@ a:hover {
   height: 500px; }
   .single-img-box img {
     width: 100%;
-    padding: 0; }
+    padding: 0;
+    margin-top: -70px; }
 
 .view-container {
   height: 100vh;
@@ -550,8 +555,7 @@ a:hover {
   opacity: 0.99; }
 
 ul#menu li {
-  color: #89F8EA;
-  font-weight: bold;
+  color: #ffffff;
   font-size: 25px;
   border-bottom: 1px solid #424459; }
   ul#menu li:first-child {
