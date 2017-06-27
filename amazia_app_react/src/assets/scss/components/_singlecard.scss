@@ -1,0 +1,81 @@
+.single-container {
+  box-shadow: 5px 10px 5px $light-gray, -5px 10px 5px $light-gray;
+  padding: 0;
+}
+
+.single-img-box {
+  width: 100%;
+  overflow: hidden;
+  height: 500px;
+  img {
+    width: 100%;
+    padding: 0;
+    margin-top: -70px;
+  }
+}
+
+.view-container {
+  height: 100vh;
+  margin-top: 65px;
+  img {
+    margin-left: -90px;
+  }
+}
+
+.view-img-box {
+  overflow: hidden;
+  box-shadow: 5px -5px 5px $shadow;
+  img {
+    height: 100vh;
+  }
+}
+
+.view-text-box {
+  padding: 50px;
+}
+
+.single-text-box {
+  padding: 50px 70px 180px 80px;
+}
+
+.area-font {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: $mid-gray;
+}
+
+.ratings-box {
+  padding: 15px 0;
+}
+
+.desc-font {
+  font-size: 22px;
+  padding: 20px 150px 20px 0;
+}
+
+.desc-font-view {
+  font-size: 20px;
+  padding: 70px 150px 40px 20px;
+  margin-top: 90px;
+}
+
+.a-font, .a-font-view {
+  font-size: 17px;
+  color: $deeper-pastel-green;
+  font-weight: bold;
+}
+
+.a-font-view {
+  padding-left: 20px;
+}
+
+.edit-btn-margin {
+  margin-left: 20px;
+}
+
+.span-font {
+  font-size: 20px;
+  color: $gray;
+  font-weight: normal;
+}
