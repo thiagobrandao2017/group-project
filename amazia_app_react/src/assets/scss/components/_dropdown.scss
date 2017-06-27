@@ -1,15 +1,56 @@
+.search-section {
+  position:fixed;
+  left: 0;
+  top: 60px;
+  background: $light-gray;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+}
+
 .searchbar-container {
+  box-shadow: 1px 1px 7px $shadow;
   position: fixed;
   top: 65px;
   left: 0;
   width: 100%;
+  height: 70px;
   background: $light-gray;
+  // background: $tertiary-color;
   padding: 10px 0;
   z-index: 100;
+  input {
+    // margin-top: 20px;
+    border: $primary-color solid 3px;
+    border-radius: 5px;
+    background: $primary-color;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.area-dropdown, .dropdown-toggle, .btn, .btn-default {
+  margin-top: 7px;
+}
+
+.btn-toolbar .btn, .btn-toolbar .btn-group, .btn-toolbar .input-group {
+  &:hover {
+    // background: $white;
+    border-radius: 5px;
+  }
+  float: none;
+  width: 100%;
+}
+
+.dropdown-menu {
+  width: 100%;
+  li {
+    padding: 5px;
+    text-align: center;
+  }
 }
 
 .area-search, .food-search {
-
   text-align: center;
 }
 
@@ -28,6 +69,9 @@
 
 .area-dropdown {
   width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  border: 3px solid $tertiary-color;
 }
 
 .food-dropdown {

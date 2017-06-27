@@ -13,7 +13,7 @@ class Nav extends Component {
 
         window.localStorage.removeItem('token');
 
-        browserHistory.push('login');
+        browserHistory.push('guest');
     }
 
     handleClick(e) {
@@ -37,9 +37,9 @@ class Nav extends Component {
             <div>
                 <div id="menu-wrapper">
                   <ul id="menu">
-                    <Link to={'/favorites'}><li className="selected">My Favorites</li></Link>
-                    <Link to={'/restaurants/new'}><li>Add New Restaurant</li></Link>
-                    <a onClick={this.handleLogout.bind(this)}><li>Logout</li></a>
+                    <Link to={'/favorites'}><li>My Forked List</li></Link>
+                    <Link to={'/restaurants/new'}><li>Add a Restaurant</li></Link>
+                    <Link to={'/guest'} onClick={this.handleLogout.bind(this)}><li>Logout</li></Link>
                   </ul>
                 </div>
 

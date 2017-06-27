@@ -43,8 +43,8 @@ class Restaurants extends Component {
 
     // <img className="fork" src="blackFork.png"/>
 
-    // ternary operator
-
+    // ternary operator goes in const bookmark below
+    // if bookmark is true render this if not render this
     render() {
         const bookmark = <FontAwesome onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} name="bookmark" className="bookmark" />
         return(
@@ -64,7 +64,7 @@ class Restaurants extends Component {
                       <Col sm={7}>
                         <p className="area-font">{this.props.restaurant.area}</p>
                       </Col>
-                      <Col sm={5} className="text-right">
+                      <Col sm={5}>
                         <button onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} className="main-like-btn">{bookmark}</button>
                         <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
                           <FontAwesome name="chevron-right" className="text-right view-link"/>

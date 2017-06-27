@@ -41,16 +41,6 @@ class Dashboard extends Component {
   onSelectArea(each) {
     (each === "All") ? this.setState({ filteredRestaurants: this.state.restaurants }):
     this.setState({ filteredRestaurants: this.state.restaurants.filter(x => x.area === each) });
-
-    // if (each === "All") {
-    //   this.setState({
-    //     filteredRestaurants: this.state.restaurants
-    //   })
-    // } else {
-    //   this.setState({
-    //     filteredRestaurants: this.state.restaurants.filter(x => x.area === each)
-    //   });
-    // }
   }
 
   render() {

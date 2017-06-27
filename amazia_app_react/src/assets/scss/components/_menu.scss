@@ -1,0 +1,18 @@
+#menu-wrapper.open {
+  background: $tertiary-color;
+  opacity: 0.99;
+}
+
+ul#menu li {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 25px;
+  border-bottom: 1px solid #424459;
+  &:first-child {
+    padding-top: 100px;
+  }
+}
+
+ul#menu {
+  padding-top: 200px;
+}

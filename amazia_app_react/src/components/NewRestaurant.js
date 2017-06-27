@@ -57,7 +57,7 @@ class NewRestaurant extends Component {
         <Header />
 
         <div className="container">
-          <div className="edit-container text-center">
+          <div className="new-container text-center">
             <h2>Add New Restaurant</h2>
             <form className="form" onSubmit={this.handleSubmit.bind(this)}>
               <div>
@@ -94,13 +94,13 @@ class NewRestaurant extends Component {
                   <h4>Rating</h4>
               </div>
               <div>
-                  <input onChange={this.handleChange.bind(this)} name="rating" type="number"  />
+                  <input onChange={this.handleChange.bind(this)} name="rating" type="number" placeholder="Rating" />
               </div>
               <div>
                   <h4>Area</h4>
               </div>
               <div>
-                  <input onChange={this.handleChange.bind(this)} name="area" type="text"  />
+                  <input onChange={this.handleChange.bind(this)} name="area" type="text" placeholder="Area" />
               </div>
               <div className="text-center">
                   <button type="submit" className="edit-btn">Submit</button>
