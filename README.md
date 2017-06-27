@@ -17,7 +17,7 @@ https://amazia.herokuapp.com/
 
 ## Wireframes
 
-![image uploaded from ios 3](https://user-images.githubusercontent.com/18605009/27613757-6df98f40-5b6b-11e7-9601-d633bba05704.jpg)
+![image uploaded from ios 4](https://user-images.githubusercontent.com/18605009/27613848-e3fdbd1a-5b6b-11e7-90cd-a710c5cec864.jpg)
 
 ![Homepage](http://i.imgur.com/MAyIZMZ.png "Page 1")
 
