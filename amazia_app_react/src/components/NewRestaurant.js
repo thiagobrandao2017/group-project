@@ -30,7 +30,7 @@ class NewRestaurant extends Component {
       event.preventDefault();
 
       axios
-      .post('http://amazia-app.herokuapp.com/restaurants', {
+      .post('https://amazia-app.herokuapp.com/restaurants', {
           restaurant: this.state
       }, {
           headers: {

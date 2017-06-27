@@ -19,7 +19,7 @@ class Signup extends Component {
         event.preventDefault();
 
         axios
-        .post('http://amazia-app.herokuapp.com/users', {
+        .post('https://amazia-app.herokuapp.com/users', {
             user: this.state
         })
         .then(() => {

@@ -24,7 +24,7 @@ class Favorite extends Component {
       console.log(this.props.params.id);
       window.scrollTo(0,0);
       axios
-      .get(`http://amazia-app.herokuapp.com/favorites/${this.props.params.id}`, {
+      .get(`https://amazia-app.herokuapp.com/favorites/${this.props.params.id}`, {
           headers: {
               'Authorization': window.localStorage.getItem('token')
           }

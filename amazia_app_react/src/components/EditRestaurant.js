@@ -26,7 +26,7 @@ class EditRestaurant extends Component {
     componentDidMount() {
         window.scrollTo(0,0);
         axios
-        .get(`http://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
+        .get(`https://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
             headers: {
                 'Authorization': window.localStorage.getItem('token')
             }
@@ -47,7 +47,7 @@ class EditRestaurant extends Component {
         event.preventDefault();
 
         axios
-        .put(`http://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
+        .put(`https://amazia-app.herokuapp.com/restaurants/${this.props.params.id}`, {
             restaurant: this.state
         }, {
             headers: {
