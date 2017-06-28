@@ -298,7 +298,12 @@ a:hover {
     top: 12px;
     left: 80%;
     font-size: 12px;
-    padding: 6px 10px; } }
+    padding: 6px 10px; }
+
+  .delete-btn {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px; } }
 @media (max-width: 650px) {
   .main-like-btn {
     position: absolute;
@@ -673,6 +678,19 @@ a:hover {
   .favorite-text-box h4 {
     margin-top: 40px; }
 
+@media (max-width: 950px) {
+  .favorites-container .container {
+    margin-right: 0; } }
+@media (max-width: 650px) {
+  .favorite-img-box img {
+    margin-left: -90px; }
+
+  .favorite-text-box {
+    padding: 30px 10px; }
+    .favorite-text-box h2 {
+      font-size: 20px; }
+    .favorite-text-box h4 {
+      display: none; } }
 #menu-wrapper.open {
   background: #2C2D3D;
   opacity: 0.99; }
