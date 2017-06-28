@@ -52,17 +52,17 @@ class Header extends Component {
             <div>
               <Nav />
               <div className="header-container">
-                <Col sm={3}>
+                <Col md={3}>
                   <h4 className="welcome-text">Hi, {this.state.user}</h4>
                 </Col>
-                <Col sm={6}>
-                  <div className="text-center">
+                <Col md={6}>
+                  <div className="logo-box">
                     <Link to={`/`}>
                       <img className="main-logo" src={require('../assets/img/blackLogo.png')}/>
                     </Link>
                   </div>
                 </Col>
-                <Col sm={3} className="text-right">
+                <Col md={3} className="text-right">
 
                 </Col>
                 <div className="text-right">

@@ -40,7 +40,7 @@ class Nav extends Component {
                     <Link to={'/favorites'}><li>My Forked List</li></Link>
                     <Link to={'/restaurants/new'}><li>Add a Restaurant</li></Link>
                     <Link to={'/'}><li>View All Restaurants</li></Link>
-                    <Link to={'/guest'} onClick={this.handleLogout.bind(this)}><li>Logout</li></Link>
+                    {/* <Link to={'/guest'} onClick={this.handleLogout.bind(this)}><li>Logout</li></Link> */}
                   </ul>
                 </div>
 

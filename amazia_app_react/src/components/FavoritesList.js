@@ -16,18 +16,18 @@ class FavoritesList extends Component {
         return(
             <div className="container">
               <div className="favorite-card">
-                <Col md={2} className="text-right">
+                <Col md={2} xs={1} className="text-right">
                   <button className="delete-btn" onClick={this.props.destroyFavorite}><FontAwesome name="minus" className="text-right view-link"/></button>
                 </Col>
-                <Col md={10}>
+                <Col md={10} xs={11}>
                   <Link to={`/favorites/${this.props.favorite.id}`}>
                   <div className="favorite-card-box">
-                    <Col md={5} className="no-padding">
+                    <Col sm={5} xs={6} className="no-padding">
                       <div className="favorite-img-box">
                         <img src={this.props.favorite.img_url} />
                       </div>
                     </Col>
-                    <Col md={7} className="favorite-text-col">
+                    <Col sm={7} xs={6} className="favorite-text-col">
                       <div className="favorite-text-box">
                         <h2>{this.props.favorite.restaurant_name} <span className="food-type-font">{this.props.favorite.type}</span></h2>
                         <h4>{this.props.favorite.area}</h4>
