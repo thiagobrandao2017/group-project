@@ -33,15 +33,6 @@ class Restaurants extends Component {
             console.log(err);
         });
     }
-    //
-    // handleData(event) {
-    //     console.log(event.target.dataset.id);
-    //     this.setState({
-    //       restaurant_id: event.target.dataset.id
-    //     })
-    // }
-
-    // <img className="fork" src="blackFork.png"/>
 
     // ternary operator goes in const bookmark below
     // if bookmark is true render this if not render this

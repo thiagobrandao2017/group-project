@@ -85,15 +85,24 @@
 .guest-logo {
   width: 100px;
   position: relative;
-  top: -15px;
-  left: 70%; }
+  top: 0;
+  left: 70%;
+  z-index: 1000; }
+
+.board-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%; }
 
 .board-container {
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 13%;
   width: 100%;
   max-width: 800px;
   height: 450px;
+  max-height: 100%;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #888888; }
   .board-container h1 {
@@ -151,6 +160,28 @@
   .link:hover h1 {
     color: #2C2D3D; }
 
+@media (max-width: 650px) {
+  h1 {
+    font-size: 30px; }
+
+  .guest-logo {
+    display: none; }
+
+  .board-container {
+    height: 100vh;
+    margin: 10px; }
+
+  .signup-section, .login-section {
+    height: 50%;
+    padding: 10px; }
+
+  .form-container {
+    height: 100%; }
+    .form-container input {
+      margin: 6px;
+      padding: 3px; }
+    .form-container button {
+      margin-top: 10px; } }
 body {
   font-family: "Comfortaa", "Avenir", "sans-serif";
   color: #2C2D3D;
