@@ -101,6 +101,14 @@
     line-height: 30px;
   }
 
+  .single-img-box {
+    margin-top: 65px;
+    height: 400px;
+    img {
+      margin-top: 0px;
+    }
+  }
+
 }
 
 @media (max-width: 650px) {
@@ -136,5 +144,27 @@
 
   .a-font-view {
     font-size: 14px;
+  }
+
+  .single-container {
+      box-shadow: none;
+    }
+
+  .single-img-box {
+    height: 250px;
+  }
+
+  .single-text-box {
+    padding: 30px 40px 60px 50px;
+  }
+
+  .desc-font {
+    font-size: 17px;
+    padding: 20px 70px 20px 0;
+    line-height: 27px;
+  }
+
+  .a-font {
+    font-size: 15px;
   }
 }
