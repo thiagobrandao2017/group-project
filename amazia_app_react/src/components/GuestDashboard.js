@@ -9,7 +9,7 @@ class GuestDashboard extends Component {
 
   render() {
     return (
-      <section>
+      <section className="board-section">
         <div className="container">
           <div className="board-container">
             <Link className="link" to={`/signup`}>

@@ -33,22 +33,13 @@ class Restaurants extends Component {
             console.log(err);
         });
     }
-    //
-    // handleData(event) {
-    //     console.log(event.target.dataset.id);
-    //     this.setState({
-    //       restaurant_id: event.target.dataset.id
-    //     })
-    // }
-
-    // <img className="fork" src="blackFork.png"/>
 
     // ternary operator goes in const bookmark below
     // if bookmark is true render this if not render this
     render() {
         const bookmark = <FontAwesome onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} name="bookmark" className="bookmark" />
         return(
-          <section className="container-wrapper">
+          <section>
               <Col md={6}>
                 <div className="card-container">
                   <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">

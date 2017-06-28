@@ -58,50 +58,24 @@ class Restaurant extends Component {
         });
     }
 
-    // <div className="container single-container">
-    //   <div className="single-img-box">
-    //     <img src={this.state.img_url} />
-    //   </div>
-    //   <div className="single-text-box">
-    //     <div className="row">
-    //       <Col sm={11}>
-    //         <h1 className="font-bold">{this.state.restaurant_name} <span className="span-font">{this.state.type}</span></h1>
-    //         <h4 className="area-font font-bold">{this.state.area}</h4>
-    //       </Col>
-    //       <Col sm={1}>
-    //         <button onClick={(e) => this.handleClick(e)} className="like-btn"><img className="fork-big" src={require('../assets/img/blackFork.png')}/>
-    //
-    //         </button>
-    //       </Col>
-    //     </div>
-    //     <div className="ratings-box">
-    //
-    //     </div>
-    //     <p className="desc-font text-left">{this.state.description}</p>
-    //     <p className="a-font">{this.state.address}</p>
-    //     <Link to={`/restaurants/${this.props.params.id}/edit`}><button className="edit-btn">Edit</button></Link>
-    //     <Link to={`/`}><button className="back-btn">Back</button></Link>
-    //   </div>
-    // </div>
-
     render() {
         return(
             <div>
               <Header />
 
               <div className="view-container">
-                <Col md={5} className="no-padding">
+                <Col sm={5} className="no-padding">
                   <div className="view-img-box">
                     <img src={this.state.img_url} />
                   </div>
                 </Col>
-                <Col md={7}>
+                <Col sm={7}>
                   <div className="view-text-box">
-                    <Col md={11}>
+                    <Col sm={11} xs={10}>
                       <h1 className="font-bold">{this.state.restaurant_name} <span className="span-font">{this.state.type}</span></h1>
                       <h4 className="area-font font-bold">{this.state.area}</h4>
                     </Col>
-                    <Col md={1}>
+                    <Col sm={1} xs={2}>
                       <button onClick={(e) => this.handleClick(e)} className="like-btn"><img className="fork-big" src={require('../assets/img/blackFork.png')}/>
                       </button>
                     </Col>

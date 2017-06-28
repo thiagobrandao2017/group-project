@@ -67,3 +67,29 @@
     margin-top: 40px;
   }
 }
+
+@media (max-width: 950px) {
+  .favorites-container {
+    .container {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .favorite-img-box {
+    img {
+      margin-left: -90px;
+    }
+  }
+
+  .favorite-text-box {
+    padding: 30px 10px;
+    h2 {
+      font-size: 20px;
+    }
+    h4 {
+      display: none;
+    }
+  }
+}
