@@ -39,7 +39,7 @@ class Restaurants extends Component {
     render() {
         const bookmark = <FontAwesome onClick={(e) => this.handleClick(e)} data-id={this.props.restaurant.id} name="bookmark" className="bookmark" />
         return(
-          <section className="container-wrapper">
+          <section>
               <Col md={6}>
                 <div className="card-container">
                   <Link to={`/restaurants/${this.props.restaurant.id}`} className="card-link">
