@@ -303,7 +303,15 @@ a:hover {
   .main-like-btn {
     position: absolute;
     top: -20px;
-    left: 40%; } }
+    left: 40%; }
+
+  .fork-big {
+    height: 40px; }
+
+  .edit-btn, .back-btn {
+    font-size: 13px;
+    margin-top: 40px;
+    padding: 12px 6px; } }
 .dashboard-container {
   padding-bottom: 150px;
   padding-top: 200px; }
@@ -450,6 +458,46 @@ a:hover {
   color: #232323;
   font-weight: normal; }
 
+@media (max-width: 950px) {
+  .view-img-box img {
+    margin-left: -260px; }
+
+  .view-text-box {
+    padding: 50px 30px; }
+    .view-text-box h1 {
+      font-size: 27px; }
+
+  .desc-font-view {
+    font-size: 17px;
+    padding: 70px 80px 40px 20px;
+    margin-top: 90px;
+    line-height: 30px; } }
+@media (max-width: 650px) {
+  .view-container {
+    height: auto; }
+
+  .view-img-box {
+    height: 400px; }
+    .view-img-box img {
+      margin-left: 0;
+      width: 100vh;
+      height: auto; }
+
+  .view-text-box {
+    padding: 50px 0px 50px 30px; }
+    .view-text-box h1 {
+      font-size: 22px; }
+    .view-text-box .area-font {
+      font-size: 17px; }
+
+  .desc-font-view {
+    font-size: 14px;
+    padding: 70px 40px 40px 20px;
+    margin-top: 90px;
+    line-height: 25px; }
+
+  .a-font-view {
+    font-size: 14px; } }
 .edit-container, .new-container {
   margin-top: 130px;
   background: #eeedf2;

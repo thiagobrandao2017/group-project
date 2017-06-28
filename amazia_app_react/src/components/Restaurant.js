@@ -64,18 +64,18 @@ class Restaurant extends Component {
               <Header />
 
               <div className="view-container">
-                <Col md={5} className="no-padding">
+                <Col sm={5} className="no-padding">
                   <div className="view-img-box">
                     <img src={this.state.img_url} />
                   </div>
                 </Col>
-                <Col md={7}>
+                <Col sm={7}>
                   <div className="view-text-box">
-                    <Col md={11}>
+                    <Col sm={11} xs={10}>
                       <h1 className="font-bold">{this.state.restaurant_name} <span className="span-font">{this.state.type}</span></h1>
                       <h4 className="area-font font-bold">{this.state.area}</h4>
                     </Col>
-                    <Col md={1}>
+                    <Col sm={1} xs={2}>
                       <button onClick={(e) => this.handleClick(e)} className="like-btn"><img className="fork-big" src={require('../assets/img/blackFork.png')}/>
                       </button>
                     </Col>
