@@ -58,11 +58,11 @@ class Login extends Component {
                   <div className="form-container">
                     <form className="form-container" onSubmit={this.handleSubmit.bind(this)}>
                         <div>
-                            <input onChange={this.handleChange.bind(this)} name="email" type="email" placeholder="Email Address" />
+                            <input onChange={this.handleChange.bind(this)} name="email" value="jena@jena.com" type="email" placeholder="Email Address" />
                         </div>
 
                         <div>
-                            <input onChange={this.handleChange.bind(this)} name="password" type="password" placeholder="Password" />
+                            <input onChange={this.handleChange.bind(this)} name="password" value="jena" type="password" placeholder="Password" />
                         </div>
 
                         <div className="text-center">
