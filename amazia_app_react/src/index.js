@@ -18,7 +18,7 @@ import Login from './components/Login';
 
 const restrict = () => {
     if (!window.localStorage.getItem('token')) {
-        browserHistory.push('/guest');
+        browserHistory.push('/login');
     }
 }
 
