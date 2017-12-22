@@ -1,35 +1,17 @@
 import React, { Component } from 'react';
 import blackLogo from '../assets/img/blackLogo.png';
-import Nav from './Nav';
-import axios from 'axios';
 import { Col } from 'react-bootstrap';
 import { Link, browserHistory } from 'react-router';
+import Nav from './Nav';
 
 class Header extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-          user: [],
-          mouseEnter: false
-        }
-    }
-
-    componentDidMount() {
-      axios
-      .get('https://amazia-app.herokuapp.com/users', {
-          headers: {
-              'Authorization': window.localStorage.getItem('token')
-          }
-      })
-      .then((response) => {
-        this.setState({
           user: window.localStorage.getItem('user'),
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+          mouseEnter: false,
+        }
     }
 
     handleLogout(event) {
@@ -40,6 +22,22 @@ class Header extends Component {
         browserHistory.push('guest');
     }
 
+    handleClick(e) {
+        const menuWrapper = document.querySelector('#menu-wrapper');
+        const burgerButton = document.querySelector('#hamburger-button');
+
+        const slideMenuMenu = () => {
+            menuWrapper.classList.toggle('open');
+        }
+
+        const animateHamburger = () => {
+            burgerButton.classList.toggle('open');
+        }
+
+        slideMenuMenu();
+        animateHamburger();
+    }
+
     changeColor() {
       this.setState({
         mouseEnter: true
@@ -47,10 +45,11 @@ class Header extends Component {
     }
 
     render() {
-        const colorClass = this.state.mouseEnter ? "red" : "blue";
         return(
             <div>
-              <Nav />
+              <Nav
+                handleClick={this.handleClick}
+              />
               <div className="header-container">
                 <Col md={3}>
                   <h4 className="welcome-text">Hi, {this.state.user}</h4>
@@ -66,7 +65,7 @@ class Header extends Component {
 
                 </Col>
                 <div className="text-right">
-                  <button className={`logout-btn ${colorClass}`} onMouseEnter={() => this.changeColor()} onClick={this.handleLogout.bind(this)}>
+                  <button className={`logout-btn`} onMouseEnter={this.changeColor} onClick={this.handleLogout}>
                     Logout
                   </button>
                 </div>

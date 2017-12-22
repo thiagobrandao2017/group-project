@@ -8,30 +8,6 @@ class Nav extends Component {
         super(props)
     }
 
-    handleLogout(event) {
-        event.preventDefault();
-
-        window.localStorage.removeItem('token');
-
-        browserHistory.push('guest');
-    }
-
-    handleClick(e) {
-        const menuWrapper = document.querySelector('#menu-wrapper');
-        const burgerButton = document.querySelector('#hamburger-button');
-
-        const slideMenuMenu = () => {
-            menuWrapper.classList.toggle('open');
-        }
-
-        const animateHamburger = () => {
-            burgerButton.classList.toggle('open');
-        }
-
-        slideMenuMenu();
-        animateHamburger();
-    }
-
     render() {
         return(
             <div>
@@ -46,7 +22,7 @@ class Nav extends Component {
 
                 <div id="content-wrapper">
                     <div id="hamburger-button">
-                      <a onClick={(e) => this.handleClick(e)} id='hamburger-button'>
+                      <a onClick={(e) => this.props.handleClick(e)} id='hamburger-button'>
                         <span></span>
                         <span></span>
                         <span></span>

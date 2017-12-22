@@ -8,8 +8,8 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            email: '',
-            password: '',
+            email: 'jena@jena.com',
+            password: 'jena',
         }
     }
 
@@ -36,9 +36,10 @@ class Login extends Component {
     }
 
     handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
+      event.preventDefault();
+      this.setState({
+          [event.target.name]: event.target.value
+      });
     }
 
     render() {
@@ -58,11 +59,11 @@ class Login extends Component {
                   <div className="form-container">
                     <form className="form-container" onSubmit={this.handleSubmit.bind(this)}>
                         <div>
-                            <input onChange={this.handleChange.bind(this)} name="email" value="jena@jena.com" type="email" />
+                            <input onChange={this.handleChange.bind(this)} name="email" defaultValue={this.state.email} type="email" />
                         </div>
 
                         <div>
-                            <input onChange={this.handleChange.bind(this)} name="password" value="jena" type="password" />
+                            <input onChange={this.handleChange.bind(this)} name="password" defaultValue={this.state.password} type="password" />
                         </div>
 
                         <div className="text-center">
